@@ -20,7 +20,7 @@ namespace PostureApp
                     Children = {
                         new Label {
                             XAlign = TextAlignment.Center,
-                            Text = "Hello, "
+                            Text = "Hello, TEst 2 123456 "
                         }
                     }
                 }
