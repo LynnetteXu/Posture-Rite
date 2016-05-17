@@ -4,7 +4,26 @@
              x:Class="PostueRiteApp.Pages.AppointmentPage"
              Title="Appointment">
   <StackLayout VerticalOptions="Start">
-    <Label Text="Appointment Label" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Label Text="Choose Doctor for Appointment" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" />
+    <Grid>
+      <Label Text="Name"/>
+      <Label Grid.Column="1" Text="# of Appointments" />
+      <Label Grid.Column="2" Text="Specialty"/>
+    </Grid>
+    <ListView x:Name ="DoctorList" HasUnevenRows="True">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid>
+              <Label Text="{Binding Name}" FontAttributes="Bold"/>
+              <Label Grid.Column="1" Text="{Binding Appointments}" />
+              <Label Grid.Column="2" Text="{Binding Specialty}"/>
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+
+      </ListView.ItemTemplate>
+    </ListView>
     <Button VerticalOptions="EndAndExpand" Text="Back to Profile" x:Name="BackToProfileButton" Clicked="BackToProfileButton_Clicked"></Button>
   </StackLayout>
 

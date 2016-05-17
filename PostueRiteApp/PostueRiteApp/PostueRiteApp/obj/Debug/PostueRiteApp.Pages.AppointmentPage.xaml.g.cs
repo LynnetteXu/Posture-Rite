@@ -17,11 +17,15 @@ namespace PostueRiteApp.Pages {
     public partial class AppointmentPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.ListView DoctorList;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button BackToProfileButton;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(AppointmentPage));
+            DoctorList = this.FindByName<global::Xamarin.Forms.ListView>("DoctorList");
             BackToProfileButton = this.FindByName<global::Xamarin.Forms.Button>("BackToProfileButton");
         }
     }
