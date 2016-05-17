@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages ="clr-namespace:NavApp.Pages;assembly=NavApp"
+             x:Class="NavApp.Pages.MenuMaster" IsPresented="True" Title="Must-Have Title for this">
+  <!--IsPresent property is to control visibility of Mene when user click any button on menu-->
+  <MasterDetailPage.Master>
+    <ContentPage Title="MenuPage">
+      <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+										iOS="20,40,20,10"
+										Android="15,20"
+										WinPhone="20">
+        </OnPlatform>
+      </ContentPage.Padding>
+      <StackLayout>
+        <Label Text="Test for special display" FontSize="24"
+									HorizontalOptions="Center"
+									VerticalOptions="Start" />
+        <Label Text="/    /    |    \    \"   FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"/>
+        <Button Text="Reminder"></Button>
+        <Button Text="Setting"></Button>
+      </StackLayout>
+    </ContentPage>
+  </MasterDetailPage.Master>
+</MasterDetailPage>

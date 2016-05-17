@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XaamarinDisplay.pages.MainPage">
+  <StackLayout VerticalOptions="Start">
+    <Label Text="Test Line one" VerticalOptions="Center" HorizontalOptions="Center" FontSize="24"/>
+    <Label Text="Test Line two" VerticalOptions="Center" HorizontalOptions="Center" FontSize="24" x:Name ="line_two"/>
+
+    <Button x:Name ="Button1" Text="Details" Clicked="ShowDetailsPageButton_Clicked" />
+  </StackLayout>
+
+</ContentPage>

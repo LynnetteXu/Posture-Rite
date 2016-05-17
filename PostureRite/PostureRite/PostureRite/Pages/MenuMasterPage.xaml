@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Add namespace and class info here, you must add title to this page-->
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:page="clr-namespace:PostureRite.Pages;assembly=PostureRite"
+             x:Class="PostureRite.Pages.MenuMasterPage"
+             Title="Main Menu"
+             IsPresented="True">  <!--You can control if display setting menu while lauching-->
+  <!--Set the content of the main menu (master page)-->
+  <MasterDetailPage.Master>
+    <ContentPage Title="MenuPage">
+      <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+										iOS="20,40,20,10"
+										Android="15,20"
+										WinPhone="20">
+        </OnPlatform>
+      </ContentPage.Padding>
+      <StackLayout>
+        <Label Text="Test for special display" FontSize="24"
+									HorizontalOptions="Center"
+									VerticalOptions="Start" />
+        <Label Text="/    /    |    \    \"   FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"/>
+        <Button Text="Reminder"></Button>
+        <Button Text="Setting"></Button>
+      </StackLayout>
+      <Button Text="Reminder" ></Button>
+      <Button x:Name="FeedbackButton" Text="Feedback" Clicked="FeedbackButton_Clicked"></Button>
+    </ContentPage>
+  </MasterDetailPage.Master>
+</MasterDetailPage>

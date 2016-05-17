@@ -1,0 +1,2 @@
+C:\Users\user\Source\Repos\Posture-Rite\PostureRite\PostureRite\PostureRite.WinPhone\PostureRite.WinPhone.csproj;neutral
+C:\Users\user\Source\Repos\Posture-Rite\PostureRite\PostureRite\PostureRite\PostureRite.csproj;neutral

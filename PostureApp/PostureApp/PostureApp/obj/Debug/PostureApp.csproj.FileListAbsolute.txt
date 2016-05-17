@@ -1,0 +1,16 @@
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\obj\Debug\PostureApp.Pages.MainReport.xaml.g.cs
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\obj\Debug\PostureApp.Pages.SettingMenuMaster.xaml.g.cs
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\obj\Debug\PostureApp.Pages.UserFeedbackPage.xaml.g.cs
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\obj\Debug\PostureApp.Pages.UserListPage.xaml.g.cs
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\PostureApp.dll
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\PostureApp.pdb
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\obj\Debug\PostureApp.dll
+C:\Users\user\Source\Repos\Posture-Rite\PostureApp\PostureApp\PostureApp\obj\Debug\PostureApp.pdb

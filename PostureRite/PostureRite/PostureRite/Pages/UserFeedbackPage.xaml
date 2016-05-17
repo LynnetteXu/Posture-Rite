@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PostureRite.Pages.UserFeedbackPage"
+             Title="Give your Feedback">
+  <StackLayout>
+    <Label x:Name="FeedbackInstruction" Text="Please give system or your manager your own health evaluation!" FontSize="24" HorizontalTextAlignment="Center"></Label>
+    <Button x:Name="BackToProfileButton" Text="Back to Profile" VerticalOptions="End" Clicked="BackToProfileButton_Clicked"></Button>
+  </StackLayout>
+</ContentPage>

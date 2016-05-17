@@ -1,0 +1,16 @@
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xam01.dll
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xam01.pdb
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\obj\Debug\Xam01.dll
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\obj\Debug\Xam01.pdb
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\obj\Debug\Xam01.Pages.FirstPage.xaml.g.cs
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\obj\Debug\Xam01.Pages.DetailsPage.xaml.g.cs
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\obj\Debug\Xam01.dll.mdb
+C:\Users\user\Source\Repos\Posture-Rite\Xam01\Xam01\Xam01\bin\Debug\Xam01.dll.mdb
