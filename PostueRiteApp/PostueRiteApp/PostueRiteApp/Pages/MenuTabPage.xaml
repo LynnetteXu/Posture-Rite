@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:Pages="clr-namespace:PostueRiteApp.Pages;assembly=PostueRiteApp"
+             x:Class="PostueRiteApp.Pages.MenuTabPage"
+            Title="Posture-Rite">
+  <TabbedPage.Children>
+    <Pages:ReportPage />
+    <Pages:FeedbackPage />
+    <Pages:SettingPage />
+  </TabbedPage.Children>
+</TabbedPage>
