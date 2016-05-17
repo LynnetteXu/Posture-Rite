@@ -26,7 +26,7 @@ namespace PostureRite
 
             // Remove the default setting in order to user XAML to set different page
 
-            //MainPage = new ContentPage
+            // MainPage = new ContentPage
             //{
             //Content = new StackLayout
             //{
