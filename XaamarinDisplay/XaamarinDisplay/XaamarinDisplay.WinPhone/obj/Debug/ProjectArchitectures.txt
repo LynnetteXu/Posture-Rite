@@ -1,2 +1,0 @@
-C:\Users\user\Source\Repos\Posture-Rite\XaamarinDisplay\XaamarinDisplay\XaamarinDisplay.WinPhone\XaamarinDisplay.WinPhone.csproj;neutral
-C:\Users\user\Source\Repos\Posture-Rite\XaamarinDisplay\XaamarinDisplay\XaamarinDisplay\XaamarinDisplay.csproj;neutral
