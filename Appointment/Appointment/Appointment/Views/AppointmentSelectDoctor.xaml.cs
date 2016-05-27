@@ -1,4 +1,5 @@
-﻿using Appointment.ViewModels;
+﻿using Appointment.Classes;
+using Appointment.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,31 @@ namespace Appointment.Views
             InitializeComponent();
             BindingContext = new AppointmentSelectDoctorViewModel();
             var vm = BindingContext as AppointmentSelectDoctorViewModel;
+
+            SpecialistList.ItemsSource = new List<Specialist>
+            {
+                new Specialist
+                {
+                    Name = "Dr. Abraham",
+                    Appointments = 2,
+                    Specialty = "Ergonomist"
+                },new Specialist
+                {
+                    Name = "Dr. Barkawi",
+                    Appointments = 5,
+                    Specialty = "Chiropractor"
+                },new Specialist
+                {
+                    Name = "Dr. Hughes",
+                    Appointments = 1,
+                    Specialty = "Ergonomist"
+                },new Specialist
+                {
+                    Name = "Dr. Turing",
+                    Appointments = 0,
+                    Specialty = "Counsellor"
+                }
+            };
         }
     }
 }
