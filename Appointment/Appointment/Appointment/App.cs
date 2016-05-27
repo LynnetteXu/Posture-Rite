@@ -16,10 +16,13 @@ namespace Appointment
         public App()
         {
             var nav = new NavigationService();
+            var dia = new DialogService();
             nav.Configure(Locator.AppointmentMain, typeof(AppointmentMain));
             nav.Configure(Locator.AppointmentSelectDoctor, typeof(AppointmentSelectDoctor));
             nav.Configure(Locator.AppointmentSelectTime, typeof(AppointmentSelectTime));
+            nav.Configure(Locator.AppointmentConfirmSpecialist, typeof(AppointmentConfirmSpecialist));
             SimpleIoc.Default.Register<INavigationService>(() => nav);
+            SimpleIoc.Default.Register<IDialogService>(() => dia);
 
             var appointmentMain = new NavigationPage(new AppointmentMain());
             nav.Initialize(appointmentMain);

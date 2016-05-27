@@ -37,12 +37,17 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Classes\Specialist.cs" />
+    <Compile Include="Implementations\DialogService.cs" />
     <Compile Include="Implementations\Locator.cs" />
     <Compile Include="Implementations\NavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AppointmentConfirmSpecialistViewModel.cs" />
     <Compile Include="ViewModels\AppointmentMainViewModel.cs" />
     <Compile Include="ViewModels\AppointmentSelectDoctorViewModel.cs" />
     <Compile Include="ViewModels\AppointmentSelectTimeViewModel.cs" />
+    <Compile Include="Views\AppointmentConfirmSpecialist.xaml.cs">
+      <DependentUpon>AppointmentConfirmSpecialist.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AppointmentMain.xaml.cs">
       <DependentUpon>AppointmentMain.xaml</DependentUpon>
     </Compile>
@@ -97,6 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\AppointmentSelectTime.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AppointmentConfirmSpecialist.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

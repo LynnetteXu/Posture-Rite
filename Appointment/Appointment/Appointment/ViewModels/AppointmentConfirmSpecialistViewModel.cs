@@ -11,17 +11,16 @@ using Xamarin.Forms;
 
 namespace Appointment.ViewModels
 {
-    public class AppointmentSelectDoctorViewModel: ViewModelBase
-    {   
-
+    public class AppointmentConfirmSpecialistViewModel: ViewModelBase
+    {
         INavigationService _navigationservice;
-        public ICommand SelectSpecialistCommand { get; private set; }
-        public AppointmentSelectDoctorViewModel(INavigationService navigationService)
+        public ICommand NavigateCommand { get; private set; }
+        public AppointmentConfirmSpecialistViewModel(INavigationService navigationService)
         {
             _navigationservice = navigationService;
 
-            SelectSpecialistCommand = new Command(() =>
-            _navigationservice.NavigateTo(Locator.AppointmentConfirmSpecialist));
+            NavigateCommand = new Command(() =>
+            _navigationservice.GoBack());
         }
     }
 }

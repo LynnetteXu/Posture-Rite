@@ -9,7 +9,7 @@
       <Label Grid.Column="1" Text="# of Appointments" />
       <Label Grid.Column="2" Text="Specialty"/>
     </Grid>
-    <ListView x:Name ="SpecialistList" HasUnevenRows="True">
+    <ListView x:Name ="SpecialistList" HasUnevenRows="True" ItemTapped="OnItemTapped">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
@@ -23,5 +23,6 @@
 
       </ListView.ItemTemplate>
     </ListView>
+    <Button Text="Take me back to main"  Command="{Binding SelectSpecialistCommand}"/>
   </StackLayout>
 </ContentPage>
