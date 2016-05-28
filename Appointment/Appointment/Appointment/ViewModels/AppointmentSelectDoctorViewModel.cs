@@ -21,7 +21,7 @@ namespace Appointment.ViewModels
             _navigationservice = navigationService;
 
             SelectSpecialistCommand = new Command(() =>
-            _navigationservice.NavigateTo(Locator.AppointmentConfirmSpecialist));
+            _navigationservice.GoBack());
         }
     }
 }

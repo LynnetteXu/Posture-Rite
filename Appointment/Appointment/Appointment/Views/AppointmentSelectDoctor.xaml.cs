@@ -46,18 +46,18 @@ namespace Appointment.Views
             };
 
             SpecialistList.ItemTapped += async (sender, e) => {
-                await DisplayAlert("Tapped", e.Item + " row was tapped", "OK");
+                Specialist sp = (Specialist)e.Item;
+                await DisplayAlert("Tapped", sp.toString() + " row was tapped", "OK");
                 Debug.WriteLine("Tapped: " + e.Item);
                 ((ListView)sender).SelectedItem = null; // de-select the row
             };
 
         }
 
-        void OnItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            if (e == null) return; // has been set to null, do not 'process' tapped event
-            Debug.WriteLine("Tapped: " + e.Item);
-            ((ListView)sender).SelectedItem = null; // de-select the row
-        }
+        void OnItemTapped (object sender, ItemTappedEventArgs e) {
+			if (e == null) return; // has been set to null, do not 'process' tapped event
+			Debug.WriteLine("Tapped: " + e.Item);
+			((ListView)sender).SelectedItem = null; // de-select the row
+		}
     }
 }

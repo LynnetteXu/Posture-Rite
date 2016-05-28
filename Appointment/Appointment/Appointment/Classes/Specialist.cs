@@ -14,6 +14,11 @@ namespace Appointment.Classes
         public int Appointments { get; set; }
 
         public string Specialty { get; set; }
+
+        public string toString()
+        {
+            return Specialty + " : " + Name;
+        }
         
     }
 }
