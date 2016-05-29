@@ -13,6 +13,7 @@ namespace Appointment
 {
     public class App : Application
     {
+        static SpecialistDatabase database;
         public App()
         {
             var nav = new NavigationService();
@@ -29,6 +30,20 @@ namespace Appointment
             // The root page of your application
             MainPage = appointmentMain;
         }
+
+        public static SpecialistDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new SpecialistDatabase();
+                }
+                return database;
+            }
+        }
+
+        public int ResumeAtTodoId { get; set; }
 
         protected override void OnStart()
         {

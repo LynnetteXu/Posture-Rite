@@ -19,35 +19,11 @@ namespace Appointment.Views
         {
             InitializeComponent();
             BindingContext = new AppointmentSelectDoctorViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
-
-            SpecialistList.ItemsSource = new List<Specialist>
-            {
-                new Specialist
-                {
-                    Name = "Dr. Abraham",
-                    Appointments = 2,
-                    Specialty = "Ergonomist"
-                },new Specialist
-                {
-                    Name = "Dr. Barkawi",
-                    Appointments = 5,
-                    Specialty = "Chiropractor"
-                },new Specialist
-                {
-                    Name = "Dr. Hughes",
-                    Appointments = 1,
-                    Specialty = "Ergonomist"
-                },new Specialist
-                {
-                    Name = "Dr. Turing",
-                    Appointments = 0,
-                    Specialty = "Counsellor"
-                }
-            };
+            
 
             SpecialistList.ItemTapped += async (sender, e) => {
                 Specialist sp = (Specialist)e.Item;
-                await DisplayAlert("Tapped", sp.toString() + " row was tapped", "OK");
+                await DisplayAlert("Tapped", sp.ToString() + " referred", "OK");
                 Debug.WriteLine("Tapped: " + e.Item);
                 ((ListView)sender).SelectedItem = null; // de-select the row
             };
@@ -59,5 +35,20 @@ namespace Appointment.Views
 			Debug.WriteLine("Tapped: " + e.Item);
 			((ListView)sender).SelectedItem = null; // de-select the row
 		}
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            // reset the 'resume' id, since we just want to re-start here
+            ((App)App.Current).ResumeAtTodoId = -1;
+            Specialist abc = new Specialist
+            {
+                Name = "abcdef",
+                Appointments = 5,
+                Specialty = "suckkk"
+            };
+            App.Database.SaveSpecialist(abc);
+            SpecialistList.ItemsSource = App.Database.GetSpecialists();
+        }
     }
 }

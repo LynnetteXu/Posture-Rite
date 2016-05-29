@@ -1,4 +1,5 @@
-﻿using Appointment.ViewModels;
+﻿using Appointment.Classes;
+using Appointment.ViewModels;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
 using System;
@@ -15,6 +16,7 @@ namespace Appointment.Views
     {
         public AppointmentMain()
         {
+
             InitializeComponent();
             BindingContext = new AppointmentMainViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
         }

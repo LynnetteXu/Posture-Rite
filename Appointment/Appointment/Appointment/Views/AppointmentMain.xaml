@@ -4,7 +4,7 @@
              x:Class="Appointment.Views.AppointmentMain">
   
   <StackLayout>
-    <Label Text="Select Option" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Label Text="Select Option" VerticalOptions="Center" HorizontalOptions="Center"/>
     <Button Text="{Binding SelectDoctorLabel}" Command="{Binding SelectDoctorCommand}"/>
     <Button Text="{Binding SelectTimeLabel}" Command="{Binding SelectTimeCommand}"/>
   </StackLayout>
