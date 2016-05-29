@@ -24,7 +24,6 @@ namespace Appointment.Views
             SpecialistList.ItemTapped += async (sender, e) => {
                 Specialist sp = (Specialist)e.Item;
                 await DisplayAlert("Tapped", sp.ToString() + " referred", "OK");
-                Debug.WriteLine("Tapped: " + e.Item);
                 ((ListView)sender).SelectedItem = null; // de-select the row
             };
 
@@ -41,13 +40,40 @@ namespace Appointment.Views
             base.OnAppearing();
             // reset the 'resume' id, since we just want to re-start here
             ((App)App.Current).ResumeAtTodoId = -1;
-            Specialist abc = new Specialist
+
+            //get all specialists from database
+            var specialistList = App.Database.GetSpecialists();
+
+            //count number of specialists in list
+            int count = specialistList.Count();
+
+            //if empty, populate.
+            if (count < 1)
             {
-                Name = "abcdef",
-                Appointments = 5,
-                Specialty = "suckkk"
-            };
-            App.Database.SaveSpecialist(abc);
+                Specialist spec1 = new Specialist()
+                {
+                    Name = "Dr. Alan Turing",
+                    Appointments = 5,
+                    Specialty = "Ergonimost"
+                };
+                App.Database.SaveSpecialist(spec1);
+                Specialist spec2 = new Specialist()
+                {
+                    Name = "Dr. Phil Dunphy",
+                    Appointments = 2,
+                    Specialty = "Chiropractor"
+                };
+                App.Database.SaveSpecialist(spec2);
+                Specialist spec3 = new Specialist()
+                {
+                    Name = "Dr. Rick Grimes",
+                    Appointments = 1,
+                    Specialty = "Phsyciatrist"
+                };
+                App.Database.SaveSpecialist(spec3);
+            }
+
+            //refetch specialist list, in case just populated.
             SpecialistList.ItemsSource = App.Database.GetSpecialists();
         }
     }

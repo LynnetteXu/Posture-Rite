@@ -42,6 +42,14 @@ namespace Appointment
             }
         }
 
+        public void DeleteAllSpecialists()
+        {
+            lock (locker)
+            {
+              database.Execute("DELETE FROM [Specialist]");
+            }
+        }
+
         public Specialist GetSpecialist(int id)
         {
             lock (locker)
