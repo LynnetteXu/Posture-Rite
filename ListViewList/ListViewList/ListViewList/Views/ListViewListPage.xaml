@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewList.Views.ListViewListPage">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="10, 20, 10, 0"
+                Android="10, 0"
+                WinPhone="10, 0" />
+  </ContentPage.Padding>
+
+  <StackLayout>
+    <SearchBar Placeholder="Search people here..."/>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Label Text="Select" Grid.Row="0" Grid.Column="0"  TextColor="Red" />
+      <Label Text="Employee names" Grid.Row="0" Grid.Column="1"  TextColor="Red" />
+      <Label Text="Select" Grid.Row="0" Grid.Column="2"  TextColor="Red" />
+      <Label Text="Score" Grid.Row="0" Grid.Column="3" TextColor="Red" HorizontalOptions="EndAndExpand" />
+    </Grid>
+    <ScrollView>
+      <ListView ItemsSource="{Binding Employee}" >
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+
+              <Grid>
+                <Switch Grid.Column="0" IsToggled="False" />
+                <Button  Grid.Column="1" Text="{Binding Name}" FontSize="Micro" Command="{Binding ButtonCommand}" CommandParameter="{Binding .}"/>
+                <Label  Grid.Column="2" Text="{Binding SeatId}"/>
+                <BoxView  Grid.Column="3" Color="{Binding Score}"
+                         HorizontalOptions="EndAndExpand" HeightRequest="10" WidthRequest="80"/>
+
+              </Grid>
+
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </ScrollView>
+    <StackLayout Orientation="Vertical">
+      <Button Text="Send message individually"/>
+      <Button Text="Send default message"/>
+      <Button Text="Refer to ergonomist"/>
+    </StackLayout>
+  </StackLayout>
+
+</ContentPage>
