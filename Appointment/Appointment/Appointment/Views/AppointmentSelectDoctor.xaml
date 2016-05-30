@@ -5,8 +5,8 @@
   <StackLayout VerticalOptions="Start">
     <Label Text="Choose Specialist for Appointment" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" />
     <Grid>
-      <Label Text="Name"/>
-      <Label Grid.Column="1" Text="# of Appointments" />
+      <Label Text="ID"/>
+      <Label Grid.Column="1" Text="Name"/>
       <Label Grid.Column="2" Text="Specialty"/>
     </Grid>
     <ListView x:Name ="SpecialistList" HasUnevenRows="True">
@@ -14,8 +14,8 @@
         <DataTemplate>
           <ViewCell>
             <Grid>
-              <Label Text="{Binding Name}" FontAttributes="Bold"/>
-              <Label Grid.Column="1" Text="{Binding Appointments}" />
+              <Label Text="{Binding ID}" FontAttributes="Bold"/>
+              <Label Grid.Column="1" Text="{Binding Name}" />
               <Label Grid.Column="2" Text="{Binding Specialty}"/>
             </Grid>
           </ViewCell>
