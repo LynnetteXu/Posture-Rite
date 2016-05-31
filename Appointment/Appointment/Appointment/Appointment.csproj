@@ -48,6 +48,7 @@
     <Compile Include="ViewModels\AppointmentMainViewModel.cs" />
     <Compile Include="ViewModels\AppointmentSelectDoctorViewModel.cs" />
     <Compile Include="ViewModels\AppointmentSelectTimeViewModel.cs" />
+    <Compile Include="ViewModels\EmployeeAppointmentMainViewModel.cs" />
     <Compile Include="Views\AppointmentConfirmSpecialist.xaml.cs">
       <DependentUpon>AppointmentConfirmSpecialist.xaml</DependentUpon>
     </Compile>
@@ -59,6 +60,9 @@
     </Compile>
     <Compile Include="Views\AppointmentSelectTime.xaml.cs">
       <DependentUpon>AppointmentSelectTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeAppointmentMain.xaml.cs">
+      <DependentUpon>EmployeeAppointmentMain.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\AppointmentConfirmSpecialist.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\EmployeeAppointmentMain.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

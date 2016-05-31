@@ -22,6 +22,7 @@ namespace Appointment
             nav.Configure(Locator.AppointmentSelectDoctor, typeof(AppointmentSelectDoctor));
             nav.Configure(Locator.AppointmentSelectTime, typeof(AppointmentSelectTime));
             nav.Configure(Locator.AppointmentConfirmSpecialist, typeof(AppointmentConfirmSpecialist));
+            nav.Configure(Locator.EmployeeAppointmentMain, typeof(EmployeeAppointmentMain));
             SimpleIoc.Default.Register<INavigationService>(() => nav);
             SimpleIoc.Default.Register<IDialogService>(() => dia);
 

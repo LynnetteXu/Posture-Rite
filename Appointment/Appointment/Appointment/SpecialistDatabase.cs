@@ -24,6 +24,7 @@ namespace Appointment
             database = DependencyService.Get<ISQLite>().GetConnection();
             // create the tables
             database.CreateTable<Specialist>();
+            database.CreateTable<Employee>();
         }
 
         public IEnumerable<Specialist> GetSpecialists()
@@ -31,6 +32,14 @@ namespace Appointment
             lock (locker)
             {
                 return (from i in database.Table<Specialist>() select i).ToList();
+            }
+        }
+
+        public IEnumerable<Employee> GetEmployees()
+        {
+            lock (locker)
+            {
+                return (from i in database.Table<Employee>() select i).ToList();
             }
         }
 
@@ -49,6 +58,13 @@ namespace Appointment
               database.Execute("DELETE FROM [Specialist]");
             }
         }
+        public void DeleteAllEmployee()
+        {
+            lock (locker)
+            {
+                database.Execute("DELETE FROM [Employee]");
+            }
+        }
 
         public Specialist GetSpecialist(int id)
         {
@@ -58,7 +74,31 @@ namespace Appointment
             }
         }
 
+        public Employee GetEmployee(int id)
+        {
+            lock (locker)
+            {
+                return database.Table<Employee>().FirstOrDefault(x => x.ID == id);
+            }
+        }
+
         public int SaveSpecialist(Specialist item)
+        {
+            lock (locker)
+            {
+                if (item.ID != 0)
+                {
+                    database.Update(item);
+                    return item.ID;
+                }
+                else
+                {
+                    return database.Insert(item);
+                }
+            }
+        }
+
+        public int SaveEmployee(Employee item)
         {
             lock (locker)
             {
@@ -79,6 +119,14 @@ namespace Appointment
             lock (locker)
             {
                 return database.Delete<Specialist>(id);
+            }
+        }
+
+        public int DeleteEmployee(int id)
+        {
+            lock (locker)
+            {
+                return database.Delete<Employee>(id);
             }
         }
     }

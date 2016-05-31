@@ -60,7 +60,24 @@ namespace Appointment.Views
                 };
                 App.Database.SaveSpecialist(spec3);
             }
-           
+
+            //get all specialists from database
+            var employeeList = App.Database.GetEmployees();
+
+            //count number of specialists in list
+            count = employeeList.Count();
+
+            //if empty, populate.
+            if (count < 1)
+            {
+                App.Database.SaveEmployee(new Employee() {
+                    Name = "John Doe",
+                    AppointmentSpecID = 11,
+                    hasAppointment = true
+                });
+            }
+
+
 
         }
 

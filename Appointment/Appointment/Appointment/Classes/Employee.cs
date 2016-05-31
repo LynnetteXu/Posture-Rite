@@ -26,6 +26,10 @@ namespace Appointment.Classes
             hasAppointment = false;
             AppointmentSpecID = 0;
         }
+        public Employee()
+        {
+
+        }
 
         public override string ToString()
         {

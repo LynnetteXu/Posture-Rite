@@ -12,5 +12,6 @@ namespace Appointment.Implementations
         public static string AppointmentSelectDoctor= "AppointmentSelectDoctor";
         public static string AppointmentSelectTime = "AppointmentSelectTime";
         public static string AppointmentConfirmSpecialist = "AppointmentConfirmSpecialist";
+        public static string EmployeeAppointmentMain = "EmployeeAppointmentMain";
     }
 }

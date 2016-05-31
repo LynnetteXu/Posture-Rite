@@ -47,7 +47,7 @@ namespace Appointment.ViewModels
 
             SelectTimeLabel = "Select Appointment Time";
             SelectTimeCommand = new Command(() =>
-            _navigationservice.NavigateTo(Locator.AppointmentSelectTime));
+            _navigationservice.NavigateTo(Locator.EmployeeAppointmentMain));
         }
     }
 }
