@@ -27,14 +27,14 @@
       <Label Text="Score" Grid.Row="0" Grid.Column="3" TextColor="Red" HorizontalOptions="EndAndExpand" />
     </Grid>
     <ScrollView>
-      <ListView ItemsSource="{Binding Employee}" >
+      <ListView x:Name="EmployeeList" ItemsSource="{Binding Employee}" >
         <ListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
 
               <Grid>
                 <Switch Grid.Column="0" IsToggled="False" />
-                <Button  Grid.Column="1" Text="{Binding Name}" FontSize="Micro" Command="{Binding ButtonCommand}" CommandParameter="{Binding .}"/>
+                <Label  Grid.Column="1" Text="{Binding Name}" FontSize="Micro"/>
                 <Label  Grid.Column="2" Text="{Binding SeatId}"/>
                 <BoxView  Grid.Column="3" Color="{Binding Score}"
                          HorizontalOptions="EndAndExpand" HeightRequest="10" WidthRequest="80"/>

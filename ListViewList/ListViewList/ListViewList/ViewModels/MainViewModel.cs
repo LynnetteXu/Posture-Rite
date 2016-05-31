@@ -63,7 +63,7 @@ namespace ListViewList.ViewModels
 
 
         private INavigationService _navigationService;
-        public ICommand ButtonCommand { get; set; }
+        //public ICommand ButtonCommand { get; set; }
         public MainViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
@@ -76,11 +76,11 @@ namespace ListViewList.ViewModels
                     new Employees { Name="Patrick", SeatId=5022, Score=Color.Yellow },
                      new Employees { Name="Patrick", SeatId=5022, Score=Color.Teal }
             };
-            if (navigationService == null) throw new ArgumentNullException("navigationService");
+           /* if (navigationService == null) throw new ArgumentNullException("navigationService");
             _navigationService = navigationService;
             //ButtonText = "Move to next page";
             ButtonCommand = new Command(param =>
-           _navigationService.NavigateTo(Locator.SingleEmployee, ((Employees)param).Name));
+           _navigationService.NavigateTo(Locator.SingleEmployee, ((Employees)param).Name));*/
         }
 
 
