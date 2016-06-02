@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Employees.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="Views\ListViewListPage.xaml.cs">
       <DependentUpon>ListViewListPage.xaml</DependentUpon>
     </Compile>
