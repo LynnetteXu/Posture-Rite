@@ -1,4 +1,4 @@
-﻿using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
 using ListViewList.Implementations;
 using ListViewList.Views;
@@ -18,8 +18,9 @@ namespace ListViewList
             var mainPage = new NavigationPage(new ListViewListPage());
             nav.Initialize(mainPage);
             MainPage = mainPage;
+            //ListViewListPage = mainPage;
         }
-                  
+
         protected override void OnStart()
         {
             // Handle when your app starts

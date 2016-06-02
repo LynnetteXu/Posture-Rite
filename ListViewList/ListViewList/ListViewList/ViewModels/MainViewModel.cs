@@ -14,17 +14,7 @@ namespace ListViewList.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        /* private string buttonText;
-
-          public string ButtonText
-          {
-              get { return buttonText; }
-              set
-              {
-                  buttonText = value;
-                  RaisePropertyChanged(() => ButtonText);
-              }
-          }
+        /* 
           private string entryText;
          public string EntryText
          {
@@ -35,22 +25,19 @@ namespace ListViewList.ViewModels
                  RaisePropertyChanged(() => EntryText);
              }
          }*/
-        private ObservableCollection<Employees> employee;
-        public ObservableCollection<Employees> Employee
-        {
+        private ObservableCollection<Employee> employee;
+        public ObservableCollection<Employee> Employees {
             get
             {
                 return employee;
             }
-            set
-            {
-                employee = value;
-                RaisePropertyChanged(() => Employee);
+            set {employee = value;
+                RaisePropertyChanged(() => Employees);
             }
         }
         private string name;
 
-
+        
         public string Name
         {
             get { return name; }
@@ -61,20 +48,24 @@ namespace ListViewList.ViewModels
             }
         }
 
-
+        public ICommand SearchBarCommand { get; private set; }
         private INavigationService _navigationService;
-        //public ICommand ButtonCommand { get; set; }
+       // public ICommand ButtonCommand { get; set; }
         public MainViewModel(INavigationService navigationService)
         {
-            _navigationService = navigationService;
-            Employee = new ObservableCollection<Employees>
+            SearchBarCommand = new Command(searchTerm => 
             {
-                new Employees { Name="Patrick", SeatId=5022, Score=Color.Black },
-                 new Employees { Name="Patrick", SeatId=5022, Score=Color.Red },
-                  new Employees { Name="Patrick", SeatId=5022, Score=Color.Green },
-                   new Employees { Name="Patrick", SeatId=5022, Score=Color.Blue },
-                    new Employees { Name="Patrick", SeatId=5022, Score=Color.Yellow },
-                     new Employees { Name="Patrick", SeatId=5022, Score=Color.Teal }
+                FilterNames(searchTerm.ToString());
+            });
+            _navigationService = navigationService;
+            Employees = new ObservableCollection<Employee>
+            {
+                new Employee { Name="Patrick", SeatId=5022, Score=Color.Black },
+                 new Employee { Name="Spongebob", SeatId=22, Score=Color.Red },
+                  new Employee { Name="Peter", SeatId=992, Score=Color.Green },
+                   new Employee { Name="Clark", SeatId=444, Score=Color.Blue },
+                    new Employee { Name="Natasha", SeatId=6662, Score=Color.Yellow },
+                     new Employee { Name="Mr. Crab", SeatId=1000, Score=Color.Teal }
             };
            /* if (navigationService == null) throw new ArgumentNullException("navigationService");
             _navigationService = navigationService;
@@ -82,7 +73,23 @@ namespace ListViewList.ViewModels
             ButtonCommand = new Command(param =>
            _navigationService.NavigateTo(Locator.SingleEmployee, ((Employees)param).Name));*/
         }
+        public void FilterNames(string filter)
+        {
+             Employees.Clear();
+            if (String.IsNullOrEmpty(filter))
+            {
+                var FilteredList =  Employees.Where(x => x.Name.ToLower().Contains(filter.ToLower()));
+               
+                foreach (var item in FilteredList)
+                {
+                    Employees.Add(item);
+                }
+                RaisePropertyChanged(() => Employees);
+            }
 
+
+
+        }
 
     }
 }

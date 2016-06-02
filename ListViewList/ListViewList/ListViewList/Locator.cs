@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace ListViewList
 {
-   public class Locator
+    public class Locator
     {
         public static string ListViewListPage = "ListViewListPage";
         public static string SingleEmployee = "SingleEmployee";
-    
-}
+    }
 }
