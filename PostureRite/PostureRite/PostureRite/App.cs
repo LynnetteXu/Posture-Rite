@@ -1,46 +1,67 @@
-﻿using System;
+﻿
+using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using PostureRite.Data;
 
 using Xamarin.Forms;
+using PostureRite.Pages;
 
 namespace PostureRite
 {
     public class App : Application
     {
-        // Reset Navigation Page First
-        public static NavigationPage NavPage = null;
+        //database 
+        static PostureDB database;
 
+        //employee logged in, assign id, then getemployee
+        static Employee emp;
+        static int employeeID = 0;
         public App()
         {
-            // Set "MenuMasterPage" as main page (All page setting is in "Pages" folder)
-            // And "UserReport" as Navigation Page
-            // Assign UserReport as Detail Page to Setting Menu (Master Page is set in XMAL file)
-            NavigationPage _NavPage = new NavigationPage(new Pages.UserReport());
-            var NewMasterDetailPage = new Pages.MenuMasterPage();
-            NewMasterDetailPage.Detail = _NavPage;
+            var nav = new NavigationService();
+            nav.Configure(Locator.MainPage, typeof(MainPage));
+            //nav.Configure(Locator.AppointmentSelectDoctor, typeof(AppointmentSelectDoctor));
+            //nav.Configure(Locator.AppointmentSelectTime, typeof(AppointmentSelectTime));
+            //nav.Configure(Locator.AppointmentConfirmSpecialist, typeof(AppointmentConfirmSpecialist));
+            //nav.Configure(Locator.EmployeeAppointmentMain, typeof(EmployeeAppointmentMain));
+            SimpleIoc.Default.Register<INavigationService>(() => nav);
 
-            MainPage = NewMasterDetailPage;
-
-
-            // Remove the default setting in order to user XAML to set different page
-
-            // MainPage = new ContentPage
-            //{
-            //Content = new StackLayout
-            //{
-            //    VerticalOptions = LayoutOptions.Center,
-            //    Children = {
-            //        new Label {
-            //            XAlign = TextAlignment.Center,
-            //            Text = "Welcome to Xamarin Forms!"
-            //        }
-            //    }
-            //}
-            //};
-
+            var mainPage = new NavigationPage(new MainPage());
+            nav.Initialize(mainPage);
+            // The root page of your application
+            MainPage = mainPage;
         }
+
+        public static PostureDB Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new PostureDB();
+                }
+                return database;
+            }
+        }
+
+        public static Employee loginEmployee
+        {
+            get
+            {
+                if (database != null && employeeID > 0)
+                {
+                    emp = database.GetEmployee(employeeID);
+                }
+                return emp;
+            }
+        }
+
+
+        public int ResumeAtTodoId { get; set; }
 
         protected override void OnStart()
         {

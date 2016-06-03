@@ -82,6 +82,8 @@ class MonoPackageManager_Resources {
 		"PostureRite.Droid.dll",
 		"FormsViewGroup.dll",
 		"PostureRite.dll",
+		"SQLite-net.dll",
+		"SQLitePCL.raw.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",
@@ -144,6 +146,9 @@ class MonoPackageManager_Resources {
 		"System.Xml.XDocument.dll",
 		"System.Xml.XmlSerializer.dll",
 		"System.ServiceModel.Internals.dll",
+		"GalaSoft.MvvmLight.dll",
+		"GalaSoft.MvvmLight.Extras.dll",
+		"Microsoft.Practices.ServiceLocation.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
