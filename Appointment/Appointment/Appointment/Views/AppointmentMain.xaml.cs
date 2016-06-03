@@ -16,7 +16,6 @@ namespace Appointment.Views
     {
         public AppointmentMain()
         {
-
             InitializeComponent();
             BindingContext = new AppointmentMainViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
         }

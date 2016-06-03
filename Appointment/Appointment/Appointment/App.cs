@@ -1,4 +1,5 @@
-﻿using Appointment.Implementations;
+﻿using Appointment.Classes;
+using Appointment.Implementations;
 using Appointment.Views;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
@@ -13,7 +14,12 @@ namespace Appointment
 {
     public class App : Application
     {
+        //database 
         static SpecialistDatabase database;
+
+        //employee logged in, assign id, then getemployee
+        static Employee emp;
+        static int employeeID = 0;
         public App()
         {
             var nav = new NavigationService();
@@ -41,6 +47,18 @@ namespace Appointment
                     database = new SpecialistDatabase();
                 }
                 return database;
+            }
+        }
+
+        public static Employee loginEmployee
+        {
+            get 
+            {
+                if (database != null && employeeID>0)
+                { 
+                    emp = database.GetEmployee(employeeID);
+                }
+                return emp;
             }
         }
        

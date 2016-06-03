@@ -14,11 +14,18 @@ namespace Appointment.Views
 {
     public partial class EmployeeAppointmentMain : ContentPage
     {
-        int employeeid = 1;
-        public EmployeeAppointmentMain()
+        public EmployeeAppointmentMain(Employee emp)
         {
             InitializeComponent();
             BindingContext = new EmployeeAppointmentMainViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
+            var vm = BindingContext as EmployeeAppointmentMainViewModel;
+            vm.EmpName = emp.Name;
+            string appointmentBoolean = "No";
+            if (emp.hasAppointment)
+            {
+                appointmentBoolean = "Yes";
+            }
+            vm.HasAppointment = "Has Appointment: " + appointmentBoolean;
         }
 
         protected override void OnAppearing()
@@ -26,9 +33,6 @@ namespace Appointment.Views
             base.OnAppearing();
             // reset the 'resume' id, since we just want to re-start here
             ((App)App.Current).ResumeAtTodoId = -1;
-
-            Employee e = App.Database.GetEmployee(1);
-            //how to put this into label??
         }
     }
 }

@@ -1,8 +1,10 @@
-﻿using Appointment.Implementations;
+﻿using Appointment.Classes;
+using Appointment.Implementations;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Views;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,8 @@ namespace Appointment.ViewModels
     {
         private string selectDoctorLabel;
         private string selectTimeLabel;
+        //since no login, hardcoded employee ID
+        private int employeeID = 1;
 
         public string SelectDoctorLabel
         {
@@ -45,9 +49,11 @@ namespace Appointment.ViewModels
             SelectDoctorCommand = new Command(() =>
             _navigationservice.NavigateTo(Locator.AppointmentSelectDoctor));
 
+            Employee emp = App.Database.GetEmployee(employeeID);
             SelectTimeLabel = "Select Appointment Time";
             SelectTimeCommand = new Command(() =>
-            _navigationservice.NavigateTo(Locator.EmployeeAppointmentMain));
+            _navigationservice.NavigateTo(Locator.EmployeeAppointmentMain, emp));
+
         }
     }
 }
