@@ -7,12 +7,13 @@ using Xamarin.Forms;
 
 namespace ListViewList
 {
-    public class Employees
+    public class Employee
     {
+        
+
         public string Name { get; set; }
 
         public int SeatId { get; set; }
         public Color Score { get; set; }
-    
-};
+    };
 }
