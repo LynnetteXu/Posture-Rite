@@ -9,6 +9,7 @@ namespace ListViewList
 {
     public class App : Application
     {
+        static EmployeeDatabase database;
         public App()
         {
             var nav = new NavigationService();
@@ -20,7 +21,18 @@ namespace ListViewList
             MainPage = mainPage;
             //ListViewListPage = mainPage;
         }
-
+        public static EmployeeDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new EmployeeDatabase();
+                }
+                return database;
+            }
+        }
+        public int ResumeAtTodoId { get; set; }
         protected override void OnStart()
         {
             // Handle when your app starts

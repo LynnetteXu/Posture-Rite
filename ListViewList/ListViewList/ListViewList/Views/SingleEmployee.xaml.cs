@@ -11,10 +11,10 @@ namespace ListViewList.Views
 {
     public partial class SingleEmployee : ContentPage
     {
-        public SingleEmployee(string param)
+        public SingleEmployee(string param,int cScore, int mScore, int tScore )
         {
             InitializeComponent();
-            BindingContext = new SecondViewModel(param);
+            BindingContext = new SecondViewModel(param,cScore,mScore,tScore);
         }
     }
 }

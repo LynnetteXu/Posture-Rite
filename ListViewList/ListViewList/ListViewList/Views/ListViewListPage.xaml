@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ListViewList.Views.ListViewListPage">
+             x:Class="ListViewList.Views.ListViewListPage"
+  xmlns:scoreconverter="clr-namespace:ListViewList;assembly=ListViewList">
   <ContentPage.Padding>
     <OnPlatform x:TypeArguments="Thickness"
                 iOS="10, 20, 10, 0"
                 Android="10, 0"
                 WinPhone="10, 0" />
   </ContentPage.Padding>
+        <ContentPage.Resources>
+         <ResourceDictionary>
+            <scoreconverter:ScoreColorConverter x:Key="ScoreColorConverter"/>
+        </ResourceDictionary>
+        </ContentPage.Resources>
 
   <StackLayout>
-    <SearchBar x:Name="searchbar" Placeholder="Search people here..." SearchCommand="{Binding SearchBarCommand}" SearchCommandParameter="{Binding .}"  />
+    <SearchBar x:Name="searchbar" Placeholder="Search people here..."   />
     <Grid>
       <Grid.RowDefinitions>
         <RowDefinition Height="Auto"/>
@@ -21,24 +27,25 @@
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
       </Grid.ColumnDefinitions>
-      
-      <Label Text="Employee names" Grid.Row="0" Grid.Column="0"  TextColor="Red" />
-      <Label Text="Seat ID" Grid.Row="0" Grid.Column="1"  TextColor="Red" />
-      <Label Text="Score" Grid.Row="0" Grid.Column="2" TextColor="Red" HorizontalOptions="EndAndExpand" />
+      <Label Text="S.no." Grid.Row="0" Grid.Column="0"  TextColor="Red" />
+      <Label Text="Employee names" Grid.Row="0" Grid.Column="1"  TextColor="Red" />
+      <Label Text="Seat ID" Grid.Row="0" Grid.Column="2"  TextColor="Red" />
+      <Label Text="Score" Grid.Row="0" Grid.Column="3" TextColor="Red" HorizontalOptions="EndAndExpand" />
     </Grid>
     <ScrollView>
-      <ListView x:Name="EmployeeList" ItemsSource="{Binding Employees}">
+
+      <ListView x:Name="EmployeeList" >
         <ListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
 
               <Grid>
-                
-                <Label  Grid.Column="0" Text="{Binding Name}" FontSize="Micro"/>
-                <Label  Grid.Column="1" Text="{Binding SeatId}"/>
-                <BoxView  Grid.Column="2" Color="{Binding Score}" Grid.ColumnSpan="2"
-                         HorizontalOptions="EndAndExpand" HeightRequest="10" WidthRequest="100"  />
-
+               <Label  Grid.Column="0" Text="{Binding ID}" FontSize="Micro"/>
+                <Label  Grid.Column="1" Text="{Binding Name}" FontSize="Micro"/>
+                <Label  Grid.Column="2" Text="{Binding SeatId}"/>
+                <BoxView  Grid.Column="3"  Color="{Binding Score, Converter={StaticResource ScoreColorConverter}}" Grid.ColumnSpan="2"
+                          HeightRequest="10" WidthRequest="100"  />
+              
               </Grid>
 
             </ViewCell>
@@ -47,8 +54,8 @@
       </ListView>
     </ScrollView>
     <StackLayout Orientation="Vertical">
-      <Button Text="Send message individually"/>
-      <Button Text="Send default message"/>
+      
+      <Button Text="Send default message" Clicked="OnClick"/>
       <Button Text="Refer to ergonomist"/>
     </StackLayout>
     

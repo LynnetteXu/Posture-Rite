@@ -14,14 +14,19 @@
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
       </Grid.ColumnDefinitions>
-      <Label Text="{Binding LabelText}" Grid.Row="0" Grid.Column="0"  TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" Grid.RowSpan="2" />
-      <Button Text="Make Contact" Grid.Row="0" Grid.Column="1" FontSize="Micro"/>
-      <Button Text="Refer to Ergonomist" Grid.Row="1" Grid.Column="1" FontSize="Micro"/>
-      <Image Source="EmployeeScore.png" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Aspect="Fill"/>
-      <Label Text="Current Score      22" Grid.Row="2" Grid.Column="1" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
-      <Label Text="Monthly Score      54" Grid.Row="3" Grid.Column="1" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
-      <Label Text="Total Score        78" Grid.Row="4" Grid.Column="1" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{Binding LabelText}" Grid.Row="0" Grid.Column="0"  TextColor="Red" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" Grid.RowSpan="2" />
+      <Button Text="Make Contact" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Micro"/>
+      <Image Source="EmployeeScore.png" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="2" Aspect="Fill"/>
+      <Button Text="Refer to Ergonomist" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Micro"/>
+      
+      <Label Text="Current Score" Grid.Row="2" Grid.Column="2" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{Binding ScoreText}" Grid.Row="2" Grid.Column="3" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="Monthly Score" Grid.Row="3" Grid.Column="2" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{Binding MScoreText}" Grid.Row="3" Grid.Column="3" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="Total Score" Grid.Row="4" Grid.Column="2" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{Binding TScoreText}" Grid.Row="4" Grid.Column="3" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
     </Grid>
     <Image Source="graph.png" Aspect="Fill"/>
     
