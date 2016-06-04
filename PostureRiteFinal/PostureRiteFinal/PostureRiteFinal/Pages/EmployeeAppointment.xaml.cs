@@ -47,6 +47,7 @@ namespace PostureRiteFinal.Pages
             vm.AppointmentSpec = specName;
 
             appButton.Clicked += appButtonClicked;
+            saveAppButton.Clicked += saveAppButtonClicked;
         }
 
         protected override void OnAppearing()
@@ -67,6 +68,20 @@ namespace PostureRiteFinal.Pages
 
             appTimePicker.IsVisible = !appTimePicker.IsVisible;
             appTimePicker.Time = emp.AppointmentDateTime.TimeOfDay;
+
+            saveAppButton.IsVisible = !saveAppButton.IsVisible;
+        }
+
+        void saveAppButtonClicked(Object sender, EventArgs args)
+        {
+            DateTime newDate = appDatePicker.Date;
+            TimeSpan newTime = appTimePicker.Time;
+
+            Debug.WriteLine(newDate.ToString() +"HAHAHA" +  newTime.ToString());
+
+            Debug.WriteLine(newDate.Year+"HAHA"+ newDate.Month+" - "+ newDate.Day + " - " + newTime.Hours + " - " + newTime.Minutes + " - " + newTime.Seconds);
+
+            DateTime newDateTime = new DateTime(newDate.Year, newDate.Month, newDate.Day, newTime.Hours, newTime.Minutes, newTime.Seconds);
         }
 
     }

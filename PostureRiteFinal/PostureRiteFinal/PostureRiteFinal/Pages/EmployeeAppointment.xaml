@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PostureRiteFinal.Pages.EmployeeAppointment">
   <StackLayout>
-    <Label Text="Appointment Information Page" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" />
+    <Label Text="Appointment Information Page" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
     <Label Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="Center" />
     <Label Text="{Binding HasAppointmentString}" VerticalOptions="Center" HorizontalOptions="Center" />
     <Label Text="{Binding AppointmentSpec}" VerticalOptions="Center" HorizontalOptions="Center" />
@@ -15,6 +15,7 @@
     <TimePicker x:Name="appTimePicker" IsVisible="False">
       <TimePicker.Format>HH:mm</TimePicker.Format>
     </TimePicker>
+    <Button x:Name="saveAppButton" Text="Save New Appointment Time" IsVisible ="False"/>
     <Button Text="Back"  Command="{Binding goBackCommand}" />
     <Label Text ="{Binding EmployeeID}" IsVisible="false"/>
 
