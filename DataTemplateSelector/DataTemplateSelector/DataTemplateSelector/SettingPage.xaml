@@ -65,18 +65,6 @@
                 <ColumnDefinition Width="Auto" />
               </Grid.ColumnDefinitions>
               <Label Text="" BackgroundColor="Yellow" FontSize="14" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" />
-              <Label Text="Need further Improvement" FontSize="14" VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
-            </Grid>
-          </StackLayout>
-        </ViewCell>
-        <ViewCell IsEnabled="True">
-          <StackLayout Orientation="Horizontal">
-            <Grid>
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120" />
-                <ColumnDefinition Width="Auto" />
-              </Grid.ColumnDefinitions>
-              <Label Text="" BackgroundColor="Lime" FontSize="14" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" />
               <Label Text="Average Posture" FontSize="14" VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
             </Grid>
           </StackLayout>
@@ -88,8 +76,20 @@
                 <ColumnDefinition Width="120" />
                 <ColumnDefinition Width="Auto" />
               </Grid.ColumnDefinitions>
+              <Label Text="" BackgroundColor="Lime" FontSize="14" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" />
+              <Label Text="Nice Posture" FontSize="14" VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
+            </Grid>
+          </StackLayout>
+        </ViewCell>
+        <ViewCell IsEnabled="True">
+          <StackLayout Orientation="Horizontal">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
               <Label Text="" BackgroundColor="Green" FontSize="14" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" />
-              <Label Text="Good Posture" FontSize="14" VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
+              <Label Text="Very Good Posture" FontSize="14" VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
             </Grid>
           </StackLayout>
         </ViewCell>

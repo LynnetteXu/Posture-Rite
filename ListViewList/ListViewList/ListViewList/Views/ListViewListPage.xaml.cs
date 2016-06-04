@@ -33,7 +33,6 @@ namespace ListViewList.Views
             EmployeeList.ItemTapped += async (sender, e) => {
                 Employee sp = (Employee)e.Item;
                 this.Navigation.PushAsync(new SingleEmployee(sp.Name,sp.Score,sp.MonthlyScore,sp.TotalScore));
-                //await Navigation.PopAsync();
             };
 
 
