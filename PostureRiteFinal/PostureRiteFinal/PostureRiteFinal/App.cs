@@ -28,6 +28,7 @@ namespace PostureRiteFinal
             //nav.Configure(Locator.AppointmentSelectTime, typeof(AppointmentSelectTime));
             //nav.Configure(Locator.AppointmentConfirmSpecialist, typeof(AppointmentConfirmSpecialist));
             nav.Configure(Locator.EmployeeMain, typeof(EmployeeMain));
+            nav.Configure(Locator.EmployeeAppointment, typeof(EmployeeAppointment));
             SimpleIoc.Default.Register<INavigationService>(() => nav);
 
             var mainPage = new NavigationPage(new MainPage());

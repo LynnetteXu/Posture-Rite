@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PostureRiteFinal.Pages.EmployeeMain">
   <StackLayout VerticalOptions="Start">
-    <Label Text="{Binding EmpName}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" />
+    <Label Text="{Binding EmpName}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
     <Label Text="{Binding HasAppointment}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
+    <Button Text="{Binding AppointmentLabel}"  Command="{Binding AppointmentCommand}" />
     <Button Text="Back"  Command="{Binding goBackCommand}" />
+    <Label Text="{Binding EmployeeID}" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="False"/>
   </StackLayout>
 </ContentPage>

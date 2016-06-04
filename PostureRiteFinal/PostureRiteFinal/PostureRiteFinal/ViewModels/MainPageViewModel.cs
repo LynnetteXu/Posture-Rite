@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Views;
 using PostureRiteFinal.Data;
+using System.Diagnostics;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -11,8 +12,7 @@ namespace PostureRiteFinal.ViewModels
     {
         private string managerLabel;
         private string employeeLabel;
-        //since no login, hardcoded employee ID
-        private int employeeID = 1;
+        private int employeeID;
 
         public string ManagerLabel
         {
@@ -31,6 +31,17 @@ namespace PostureRiteFinal.ViewModels
                 employeeLabel = value;
             }
         }
+        
+
+        public int EmployeeID
+        {
+            get { return employeeID; }
+            set
+            {
+                employeeID = value;
+                RaisePropertyChanged(() => EmployeeID);
+            }
+        }
 
         INavigationService _navigationservice;
         public ICommand ManagerCommand { get; private set; }
@@ -43,10 +54,9 @@ namespace PostureRiteFinal.ViewModels
             ManagerCommand = new Command(() =>
             _navigationservice.NavigateTo(Locator.ManagerMain));
 
-            Employee emp = App.Database.GetEmployee(employeeID);
-            EmployeeLabel = "Employee Login: John Doe";
+            EmployeeLabel = "Employee Login";
             EmployeeCommand = new Command(() =>
-            _navigationservice.NavigateTo(Locator.EmployeeMain, emp));
+            _navigationservice.NavigateTo(Locator.EmployeeMain, EmployeeID));
 
         }
     }
