@@ -42,6 +42,9 @@
     <Compile Include="Data\PostureDB.cs" />
     <Compile Include="Data\Specialist.cs" />
     <Compile Include="ISQLite.cs" />
+    <Compile Include="Pages\AppointmentSelectDoctor.xaml.cs">
+      <DependentUpon>AppointmentSelectDoctor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EmployeeAppointment.xaml.cs">
       <DependentUpon>EmployeeAppointment.xaml</DependentUpon>
     </Compile>
@@ -61,6 +64,7 @@
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AppointmentSelectDoctorViewModel.cs" />
     <Compile Include="ViewModels\EmployeeAppointmentViewModel.cs" />
     <Compile Include="ViewModels\EmployeeMainViewModel.cs" />
     <Compile Include="ViewModels\ListViewListViewModel.cs" />
@@ -147,6 +151,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\ProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\AppointmentSelectDoctor.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

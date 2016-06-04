@@ -1,4 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Views;
+using PostureRiteFinal.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -213,44 +215,19 @@ namespace PostureRiteFinal.ViewModels
             }
         }
 
-        public ProfilePageViewModel(string param)
+        private string appointmentLabel;
+        public string AppointmentLabel
         {
-            LabelText = param;
-            user = new Data.Employee();
-
-
-            #region Binding data (Replace with data class from SQLite)
-
-            Name = "John Smith";
-            Description = "Header of Sale Departmant";
-            PostureScore = 53;
-            MonthlyScore = 86;
-            TodayScore = 60;
-            SeatingTime = "03:38";
-            Posture = "Leg-Crossed";
-            ChairStatus = "Occcupied";
-            Message = "Take a Break";
-
-            #endregion
-
-            #region Display color
-
-            ScoreColour = StringColor(PostureScore);
-            DailyScoreColour = StringColor(TodayScore);
-            MonthlyScoreColour = StringColor(MonthlyScore);
-
-            #endregion
-
-            // Binding Image here (full file name include namespace and folder)
-            AvatarImg = ImageSource.FromResource("PostureRiteFinal.Images.Android-icon-m.png");
-
-            ScoreImg = ImageSource.FromResource("PostureRiteFinal.Images.progress-default.png");
-            PostureImg = ImageSource.FromResource("PostureRiteFinal.Images.Posture-defaut.png");
-            WarningImg = ImageSource.FromResource("PostureRiteFinal.Images.Warning-icon-64.png");
-
+            get { return appointmentLabel; }
+            set
+            {
+                appointmentLabel = value;
+            }
         }
 
-        public ProfilePageViewModel()
+        INavigationService _navigationservice;
+        public ICommand AppointmentCommand { get; private set; }
+        public ProfilePageViewModel(INavigationService navigationService)
         {
             user = new Data.Employee();
 
@@ -258,7 +235,7 @@ namespace PostureRiteFinal.ViewModels
             #region Binding data (Replace with data class from SQLite)
 
             Name = "John Smith";
-            Description = "Header of Sale Departmant";
+            Description = "Head of Sales Departmant";
             PostureScore = 53;
             MonthlyScore = 86;
             TodayScore = 60;
@@ -283,6 +260,14 @@ namespace PostureRiteFinal.ViewModels
             ScoreImg = ImageSource.FromResource("PostureRiteFinal.Images.progress-default.png");
             PostureImg = ImageSource.FromResource("PostureRiteFinal.Images.Posture-defaut.png");
             WarningImg = ImageSource.FromResource("PostureRiteFinal.Images.Warning-icon-64.png");
+
+            _navigationservice = navigationService;
+
+            int employeeID = 1;
+            AppointmentLabel = "Set Appointment";
+            AppointmentCommand = new Command(() =>
+            _navigationservice.NavigateTo(Locator.EmployeeAppointment, employeeID));
+
         }
 
         public Color StringColor(int score)

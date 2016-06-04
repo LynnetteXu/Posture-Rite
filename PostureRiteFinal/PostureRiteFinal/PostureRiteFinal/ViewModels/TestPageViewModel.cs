@@ -191,14 +191,13 @@ namespace PostureRiteFinal.ViewModels
 
 
             _navigationService = navService;
-            TestStr = "MVVM Light";    //Testing parsing data to next page
 
             // 按鈕換頁並且傳送資料
             NextPageButtonCommmand = new Command(() =>
-            _navigationService.NavigateTo(Locator.SecondPage, TestStr));
+            _navigationService.NavigateTo(Locator.SecondPage));
 
             GoToMessageCommand = new Command(() =>
-            _navigationService.NavigateTo(Locator.SecondPage, TestStr));
+            _navigationService.NavigateTo(Locator.SecondPage));
         }
     }
 }

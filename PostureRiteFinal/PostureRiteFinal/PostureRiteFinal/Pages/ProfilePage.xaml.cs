@@ -1,4 +1,6 @@
-﻿using PostureRiteFinal.ViewModels;
+﻿using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Views;
+using PostureRiteFinal.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +13,10 @@ namespace PostureRiteFinal.Pages
 {
     public partial class ProfilePage : ContentPage
     {
-        public ProfilePage(string param)
-        {
-            InitializeComponent();
-            BindingContext = new ProfilePageViewModel(param);
-        }
         public ProfilePage()
         {
             InitializeComponent();
+            BindingContext = new ProfilePageViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
         }
     }
 }
