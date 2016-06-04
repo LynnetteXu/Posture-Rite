@@ -16,6 +16,37 @@ namespace PostureRiteFinal.Data
 
         public DateTime AppointmentDateTime { get; set; }
 
+        public string Description { get; set; }
+
+        public string ChairStatus { get; set; }
+
+        public string Posture { get; set; }
+
+        public int PostureScore { get; set; }
+
+        public int MonthlyScore { get; set; }
+
+        public int TodayScore { get; set; }
+
+        public int Weight { get; set; }
+
+        public int Height { get; set; }
+
+        public int BMI { get; set; }
+
+        public int FocusHour { get; set; }
+
+        public int Vibration { get; set; }
+
+        public int RingDuration { get; set; }
+
+        public bool PressureSensor { get; set; }
+
+        public bool AngleSenssor { get; set; }
+
+        // Store the path/file name for user avatar image
+        public string Avatar { get; set; }
+
         public Employee(string name)
         {
             Name = name;
