@@ -142,12 +142,24 @@ namespace ListViewList.Views
                 App.Database.SaveEmployee(emp6);
 
             }
-          
-            
+
+            if (multiPage != null)
+            {
+                results.Text = "Sent to ";
+                var answers = multiPage.GetSelection();
+                foreach (var a in answers)
+                {
+                    results.Text += a.Name + ", ";
+                }
+            }
+            else
+            {
+                results.Text = "";
+            }
         }
+
         
-            
-      
+
     }
         }
     
