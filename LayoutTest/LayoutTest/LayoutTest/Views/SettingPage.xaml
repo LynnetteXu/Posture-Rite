@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutTest.Views.SettingPage"
+             BackgroundColor="White"
+             Title="Settings">
+  <!--List view only accept the data from cs file (ItemsSource)-->
+  <ListView x:Name="SettingListView">
+    
+  </ListView>
+</ContentPage>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LayoutTest;assembly=LayoutTest"
+             x:Class="LayoutTest.Views.TestPage"
+             Title="Configuration">
+             <!--To use Add image extension, create new xmlns above-->
+      <TableView Intent="Data">
+        <TableRoot>
+          <TableSection Title="Setting">
+            <SwitchCell Text="Pressure Sensor" On="{Binding PressureSensor, Mode=TwoWay}" />
+            <SwitchCell Text="Angle Sensor" On="{Binding AngleSensor, Mode=TwoWay}" />
+          </TableSection>
+          <TableSection Title="Reminders">
+            <!--Start of Reminder duration setting-->
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="60*" />
+                  </Grid.ColumnDefinitions>
+                  <Label Text="     Ring Duration" FontSize="14" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" />
+                  <Image Source="{Binding RingImg}" Aspect="AspectFit" Grid.Row="0" Grid.Column="1" />
+                  <Slider Maximum="100" Minimum="0" Value="{Binding RingDuration, Mode=TwoWay}" Grid.Row="0" Grid.Column="2"></Slider>
+                </Grid>
+              </StackLayout>
+            </ViewCell>
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="60*" />
+                  </Grid.ColumnDefinitions>
+                  <Label Text="     Viber Duration" FontSize="14" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" />
+                  <Image Source="{Binding VibraImg}" Aspect="AspectFit" Grid.Row="0" Grid.Column="1" />
+                  <Slider Maximum="100" Minimum="0" Value="{Binding Vibration, Mode=TwoWay}" Grid.Row="0" Grid.Column="2"></Slider>
+                </Grid>
+              </StackLayout>
+            </ViewCell>
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="45*" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="35*" />
+                  </Grid.ColumnDefinitions>
+                  <Label Text="     Focus Hours:" FontSize="14" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" />
+                  <Label BindingContext="{x:Reference Name=focusStepper}" Text="{Binding Path=Value}" FontSize="14" VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
+                  <Label Text="HR" FontSize="14" VerticalTextAlignment="Center" Grid.Column="2" Grid.Row="0" />
+                  <Stepper x:Name="focusStepper" Value="{Binding FocusHour, Mode=TwoWay}" Increment="1" Minimum="0" Maximum="8" Grid.Column="3" Grid.Row="0" />
+                </Grid>
+              </StackLayout>
+            </ViewCell>
+            <!--End of Reminder duration setting-->
+          </TableSection>
+          <TableSection Title="Profile">
+            <ViewCell>
+              <StackLayout Orientation="Horizontal">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="70*" />
+                  </Grid.ColumnDefinitions>
+                  <Label Text="     Gender" FontSize="14" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0" />
+                  <Label Text="{Binding Gender}" FontSize="14" VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
+                </Grid>
+              </StackLayout>
+            </ViewCell>
+            <EntryCell Label="Height (cm)" Text="{Binding Height, Mode=TwoWay}" Placeholder="Enter your height" />
+            <EntryCell Label="Weight (kg)" Text="{Binding Weight, Mode=TwoWay}" Placeholder="Enter your weight" />
+            <EntryCell Label="BMI (%)" Text="{Binding BMI, Mode=TwoWay}" Placeholder="Enter your BMI" />
+            <TextCell Text="Send Message" Command="{Binding GoToMessageCommand}"></TextCell>
+            <TextCell Text="My Appointment" Command="{Binding NextPageButtonCommmand}"></TextCell>
+          </TableSection>
+        </TableRoot>
+      </TableView>
+</ContentPage>
