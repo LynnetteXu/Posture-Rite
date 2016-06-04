@@ -41,12 +41,12 @@ namespace PostureRiteFinal.ViewModels
 
             ManagerLabel = "Manager Login";
             ManagerCommand = new Command(() =>
-            _navigationservice.NavigateTo(Locator.ManagerMainPage));
+            _navigationservice.NavigateTo(Locator.ManagerMain));
 
             Employee emp = App.Database.GetEmployee(employeeID);
             EmployeeLabel = "Employee Login: John Doe";
             EmployeeCommand = new Command(() =>
-            _navigationservice.NavigateTo(Locator.EmployeeMainPage, emp));
+            _navigationservice.NavigateTo(Locator.EmployeeMain, emp));
 
         }
     }
