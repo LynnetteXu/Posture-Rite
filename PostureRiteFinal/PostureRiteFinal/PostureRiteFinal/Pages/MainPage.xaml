@@ -4,7 +4,7 @@
              x:Class="PostureRiteFinal.Pages.MainPage">
   <StackLayout>
     <Label Text="Select Option" VerticalOptions="Center" HorizontalOptions="Center"/>
-    <Button Text="{Binding ManagerLabel}" Command="{Binding ManagerCommand}"/>
+    <Button x:Name="managercommand" Text="{Binding ManagerLabel}" />
     <Button Text="{Binding EmployeeLabel}" Command="{Binding EmployeeCommand}"/>
     <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
       <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">

@@ -24,8 +24,6 @@ namespace PostureRiteFinal.Data
 
         public int PostureScore { get; set; }
 
-        public int MonthlyScore { get; set; }
-
         public int TodayScore { get; set; }
 
         public int Weight { get; set; }
@@ -48,6 +46,16 @@ namespace PostureRiteFinal.Data
 
         // Store the path/file name for user avatar image
         public string Avatar { get; set; }
+        public int SeatId { get; set; }
+        public int Score { get; set; }
+        public int MonthlyScore { get; set; }
+        public int TotalScore { get; set; }
+        public Employee(string name, int monthlyscore, int totalscore)
+        {
+            Name = name;
+            MonthlyScore = monthlyscore;
+            TotalScore = totalscore;
+        }
 
         public Employee(string name)
         {

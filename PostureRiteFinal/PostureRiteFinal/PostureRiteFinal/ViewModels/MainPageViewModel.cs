@@ -51,8 +51,7 @@ namespace PostureRiteFinal.ViewModels
             _navigationservice = navigationService;
 
             ManagerLabel = "Manager Login";
-            ManagerCommand = new Command(() =>
-            _navigationservice.NavigateTo(Locator.ListViewList));
+            
 
             EmployeeLabel = "Employee Login";
             //EmployeeCommand = new Command(() =>
