@@ -31,7 +31,7 @@
       <Label Text="S.no." Grid.Row="0" Grid.Column="0"  TextColor="Red" />
       <Label Text="Employee names" Grid.Row="0" Grid.Column="1"  TextColor="Red" />
       <Label Text="Seat ID" Grid.Row="0" Grid.Column="2"  TextColor="Red" />
-      <Label Text="Score" Grid.Row="0" Grid.Column="3" TextColor="Red" HorizontalOptions="EndAndExpand" />
+      <Label Text="Score" Grid.Row="0" Grid.Column="3" TextColor="Red" HorizontalOptions="EndAndExpand"/>
     </Grid>
     <ScrollView>
 
@@ -57,7 +57,6 @@
     <StackLayout Orientation="Vertical">
       <Label x:Name="results" Text="{Binding results}"/>
       <Button Text="Send default message" Clicked="OnClick"/>
-      <Button Text="Refer to ergonomist"/>
     </StackLayout>
 
   </StackLayout>

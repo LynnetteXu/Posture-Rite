@@ -40,6 +40,9 @@
     <Compile Include="Data\Locator.cs" />
     <Compile Include="Data\NavigationService.cs" />
     <Compile Include="Data\PostureDB.cs" />
+    <Compile Include="Pages\AppointmentSelectDoc.xaml.cs">
+      <DependentUpon>AppointmentSelectDoc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SingleEmployee.xaml.cs">
       <DependentUpon>SingleEmployee.xaml</DependentUpon>
     </Compile>
@@ -159,6 +162,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\SingleEmployee.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\AppointmentSelectDoc.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

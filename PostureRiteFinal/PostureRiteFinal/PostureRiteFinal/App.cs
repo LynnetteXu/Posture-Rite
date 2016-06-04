@@ -24,7 +24,7 @@ namespace PostureRiteFinal
         {
             var nav = new NavigationService();
             nav.Configure(Locator.MainPage, typeof(MainPage));
-            nav.Configure(Locator.AppointmentSelectDoctor, typeof(AppointmentSelectDoctor));
+            //nav.Configure(Locator.AppointmentSelectDoctor, typeof(AppointmentSelectDoctor));
             //nav.Configure(Locator.AppointmentSelectTime, typeof(AppointmentSelectTime));
             //nav.Configure(Locator.AppointmentConfirmSpecialist, typeof(AppointmentConfirmSpecialist));
             nav.Configure(Locator.EmployeeMain, typeof(EmployeeMain));
