@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Appointment.Views.EmployeeAppointmentMain">
   <StackLayout VerticalOptions="Start">
-    <Label x:Name ="employeeLabel" Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
+    <Label Text="{Binding EmpName}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" />
+    <Label Text="{Binding HasAppointment}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" />
     <Button Text="Back"  Command="{Binding goBackCommand}"/>
   </StackLayout>
 </ContentPage>
