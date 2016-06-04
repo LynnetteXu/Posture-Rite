@@ -10,5 +10,6 @@ namespace ListViewList
     {
         public static string ListViewListPage = "ListViewListPage";
         public static string SingleEmployee = "SingleEmployee";
+        public static string SelectMultipleBasePage = "SelectMultipleBasePage";
     }
 }
