@@ -29,7 +29,8 @@ namespace PostureRiteFinal
             //nav.Configure(Locator.AppointmentConfirmSpecialist, typeof(AppointmentConfirmSpecialist));
             nav.Configure(Locator.EmployeeMain, typeof(EmployeeMain));
             nav.Configure(Locator.EmployeeAppointment, typeof(EmployeeAppointment));
-            nav.Configure(Locator.ListViewList, typeof(ListViewList));
+            nav.Configure(Locator.ListViewListPage, typeof(ListViewListPage));
+            nav.Configure(Locator.SingleEmployee, typeof(SingleEmployee));
             nav.Configure(Locator.TestPage, typeof(TestPage));
             nav.Configure(Locator.SecondPage, typeof(ProfilePage));
             SimpleIoc.Default.Register<INavigationService>(() => nav);

@@ -40,19 +40,21 @@
     <Compile Include="Data\Locator.cs" />
     <Compile Include="Data\NavigationService.cs" />
     <Compile Include="Data\PostureDB.cs" />
+    <Compile Include="Pages\SingleEmployee.xaml.cs">
+      <DependentUpon>SingleEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreColorConverter.cs" />
+    <Compile Include="Data\SelectMultipleBasePage.cs" />
     <Compile Include="Data\Specialist.cs" />
     <Compile Include="ISQLite.cs" />
-    <Compile Include="Pages\AppointmentSelectDoctor.xaml.cs">
-      <DependentUpon>AppointmentSelectDoctor.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\EmployeeAppointment.xaml.cs">
       <DependentUpon>EmployeeAppointment.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\EmployeeMain.xaml.cs">
       <DependentUpon>EmployeeMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ListViewList.xaml.cs">
-      <DependentUpon>ListViewList.xaml</DependentUpon>
+    <Compile Include="Pages\ListViewListPage.xaml.cs">
+      <DependentUpon>ListViewListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -64,12 +66,12 @@
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\AppointmentSelectDoctorViewModel.cs" />
     <Compile Include="ViewModels\EmployeeAppointmentViewModel.cs" />
     <Compile Include="ViewModels\EmployeeMainViewModel.cs" />
     <Compile Include="ViewModels\ListViewListViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\ProfilePageViewModel.cs" />
+    <Compile Include="ViewModels\SecondViewModel.cs" />
     <Compile Include="ViewModels\TestPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -129,7 +131,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ListViewList.xaml">
+    <EmbeddedResource Include="Pages\ListViewListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -156,7 +158,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\AppointmentSelectDoctor.xaml">
+    <EmbeddedResource Include="Pages\SingleEmployee.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
