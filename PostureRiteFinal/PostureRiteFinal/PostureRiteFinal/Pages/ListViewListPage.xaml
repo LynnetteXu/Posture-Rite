@@ -58,6 +58,7 @@
       <Label x:Name="results" Text="{Binding results}"/>
       <Button Text="Send default message" Clicked="OnClick"/>
       <Button Text="Refer to ergonomist"/>
+      <Button Text="Go to Settings"/>
     </StackLayout>
 
   </StackLayout>

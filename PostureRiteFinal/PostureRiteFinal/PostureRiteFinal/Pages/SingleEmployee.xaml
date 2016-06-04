@@ -2,8 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PostureRiteFinal.Pages.SingleEmployee">
-  <StackLayout Orientation="Vertical">
+ 
     <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Grid Grid.Row="0" Grid.Column="0" RowSpan="2">
       <Grid.RowDefinitions>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
@@ -16,19 +25,19 @@
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
       </Grid.ColumnDefinitions>
-      <Label Text="{Binding LabelText}" Grid.Row="0" Grid.Column="0"  TextColor="Red" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" Grid.RowSpan="2" />
-      <Button Text="Make Contact" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Micro"/>
-      <Image Source="EmployeeScore.png" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="2" Aspect="Fill"/>
-      <Button Text="Refer to Ergonomist" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Micro"/>
+      <Label Text="{Binding LabelText}" Grid.Row="0" Grid.Column="0"  TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" FontAttributes="Bold" Grid.RowSpan="2" />
+      <Button Text="{Binding MakeContact}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Micro"/>
+      <Image Source="{Binding EmployeeScore}" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="2" Aspect="AspectFit"/>
+      <Button Text="{Binding ReferToErgonomist}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Micro"/>
 
-      <Label Text="Current Score" Grid.Row="2" Grid.Column="2" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{Binding CurrentScore}" Grid.Row="2" Grid.Column="2" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
       <Label Text="{Binding ScoreText}" Grid.Row="2" Grid.Column="3" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
-      <Label Text="Monthly Score" Grid.Row="3" Grid.Column="2" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{Binding MonthlyScore}" Grid.Row="3" Grid.Column="2" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
       <Label Text="{Binding MScoreText}" Grid.Row="3" Grid.Column="3" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
-      <Label Text="Total Score" Grid.Row="4" Grid.Column="2" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Label Text="{Binding TotalScore}" Grid.Row="4" Grid.Column="2" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
       <Label Text="{Binding TScoreText}" Grid.Row="4" Grid.Column="3" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"/>
     </Grid>
-    <Image Source="graph.png" Aspect="Fill"/>
+    <Image Grid.Row="2" Source="{Binding graph}" Aspect="Fill"/>
 
-  </StackLayout>
+    </Grid>
 </ContentPage>
