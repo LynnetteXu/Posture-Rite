@@ -29,6 +29,7 @@ namespace ListViewList.Views
             searchbar.SearchButtonPressed += (sender, e) => {
                 this.FilterLocations(searchbar.Text);
             };
+            searchbar.TextChanged += (sender, e) => { this.FilterLocations(searchbar.Text); };
             EmployeeList.ItemTapped += async (sender, e) => {
                 Employee sp = (Employee)e.Item;
                 this.Navigation.PushAsync(new SingleEmployee(sp.Name,sp.Score,sp.MonthlyScore,sp.TotalScore));
@@ -42,9 +43,15 @@ namespace ListViewList.Views
         }
         public void FilterLocations(string filter)
         {
-
-            var FilteredList = App.Database.GetEmployees().Where(x => x.Name.ToLower().Contains(filter.ToLower()));
-            EmployeeList.ItemsSource = FilteredList;
+            if (string.IsNullOrWhiteSpace(filter))
+            {
+                EmployeeList.ItemsSource = App.Database.GetEmployees();
+            }
+            else
+            {
+                var FilteredList = App.Database.GetEmployees().Where(x => x.Name.ToLower().Contains(filter.ToLower()));
+                EmployeeList.ItemsSource = FilteredList;
+            }
         }
         SelectMultipleBasePage<Employee> multiPage;
         async void OnClick(object sender, EventArgs ea)
