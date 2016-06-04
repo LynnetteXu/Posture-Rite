@@ -19,8 +19,13 @@ namespace PostureRiteFinal.Pages
         public MainPage()
         {
             InitializeComponent();
+            managercommand.Clicked+= (sender, e) => {
+                this.Navigation.PushAsync(new ListViewListPage());
+                //await Navigation.PopAsync();
+            };
             BindingContext = new MainPageViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
         }
+        
         protected override void OnAppearing()
         {
             //Initialize database at start if empty, do all inserts here, 
@@ -65,12 +70,66 @@ namespace PostureRiteFinal.Pages
             //get all specialists from database
             var employeeList = App.Database.GetEmployees();
 
-            //count number of specialists in list
+            //count number of employees in list
             count = employeeList.Count();
             
             //if empty, populate.
             if (count < 1)
             {
+                Employee emp1 = new Employee()
+                {
+                    Name = "Peter",
+                    SeatId = 505,
+                    Score = 10,
+                    MonthlyScore = 50,
+                    TotalScore = 78
+                };
+                App.Database.SaveEmployee(emp1);
+                Employee emp2 = new Employee()
+                {
+                    Name = "Clark",
+                    SeatId = 995,
+                    Score = 20,
+                    MonthlyScore = 48,
+                    TotalScore = 92
+                };
+                App.Database.SaveEmployee(emp2);
+                Employee emp3 = new Employee()
+                {
+                    Name = "Natasha",
+                    SeatId = 1,
+                    Score = 50,
+                    MonthlyScore = 10,
+                    TotalScore = 40
+                };
+                App.Database.SaveEmployee(emp3);
+                Employee emp4 = new Employee()
+                {
+                    Name = "Bob",
+                    SeatId = 1000,
+                    Score = 100,
+                    MonthlyScore = 22,
+                    TotalScore = 88
+                };
+                App.Database.SaveEmployee(emp4);
+                Employee emp5 = new Employee()
+                {
+                    Name = "Patrick",
+                    SeatId = 200,
+                    Score = 70,
+                    MonthlyScore = 33,
+                    TotalScore = 98
+                };
+                App.Database.SaveEmployee(emp5);
+                Employee emp6 = new Employee()
+                {
+                    Name = "Lily",
+                    SeatId = 9672,
+                    Score = 40,
+                    MonthlyScore = 88,
+                    TotalScore = 10
+                };
+                App.Database.SaveEmployee(emp6);
                 App.Database.SaveEmployee(new Employee()
                 {
                     Name = "John Doe",
