@@ -1,9 +1,7 @@
-﻿using GalaSoft.MvvmLight.Ioc;
-using GalaSoft.MvvmLight.Views;
-using PostureRiteFinal.Data;
-using PostureRiteFinal.ViewModels;
+﻿using PostureRiteFinal.Data;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,21 +10,28 @@ using Xamarin.Forms;
 
 namespace PostureRiteFinal.Pages
 {
-    public partial class AppointmentSelectDoctor : ContentPage
+    public partial class AppointmentSelectDoc : ContentPage
     {
-        public AppointmentSelectDoctor()
+        public AppointmentSelectDoc()
         {
             InitializeComponent();
-            BindingContext = new AppointmentSelectDoctorViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
 
 
             SpecialistList.ItemTapped += async (sender, e) => {
                 Specialist sp = (Specialist)e.Item;
-                await DisplayAlert("Tapped", sp.ToString() + " referred. Time of appointment to be confirmed by the employee.", "OK");
+                await DisplayAlert("Specialist Selected", sp.ToString() + " referred. Time of appointment to be confirmed by the employee.", "OK");
                 ((ListView)sender).SelectedItem = null; // de-select the row
                 await Navigation.PopAsync();
             };
 
+
+
+        }
+        void OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (e == null) return; // has been set to null, do not 'process' tapped event
+            Debug.WriteLine("Tapped: " + e.Item);
+            ((ListView)sender).SelectedItem = null; // de-select the row
         }
 
         protected override void OnAppearing()
@@ -37,7 +42,11 @@ namespace PostureRiteFinal.Pages
 
             //refetch specialist list, in case just populated.
             SpecialistList.ItemsSource = App.Database.GetSpecialists();
+        }
 
+        async void goBack(object sender, EventArgs ea)
+        {
+            await Navigation.PopAsync();
         }
     }
 }
