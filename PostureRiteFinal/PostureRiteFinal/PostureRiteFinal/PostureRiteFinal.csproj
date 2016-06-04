@@ -54,6 +54,9 @@
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
@@ -62,6 +65,7 @@
     <Compile Include="ViewModels\EmployeeMainViewModel.cs" />
     <Compile Include="ViewModels\ListViewListViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\ProfilePageViewModel.cs" />
     <Compile Include="ViewModels\TestPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -133,13 +137,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\Android-icon-m.png" />
+    <EmbeddedResource Include="Images\Android-icon-m.png" />
     <EmbeddedResource Include="Images\cell-phone-vibration.png" />
     <EmbeddedResource Include="Images\multimedia.png" />
-    <Content Include="Images\Posture-defaut-square.png" />
-    <Content Include="Images\Posture-defaut.png" />
-    <Content Include="Images\progress-default.png" />
-    <Content Include="Images\Warning-icon-64.png" />
+    <EmbeddedResource Include="Images\Posture-defaut-square.png" />
+    <EmbeddedResource Include="Images\Posture-defaut.png" />
+    <EmbeddedResource Include="Images\progress-default.png" />
+    <EmbeddedResource Include="Images\Warning-icon-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

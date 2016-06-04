@@ -76,8 +76,23 @@ namespace PostureRiteFinal.Pages
                     Name = "John Doe",
                     AppointmentSpecID = 1,
                     hasAppointment = true,
-                    AppointmentDateTime = new DateTime(2016, 6, 17, 17, 0, 0)
-                });
+                    AppointmentDateTime = new DateTime(2016, 6, 17, 17, 0, 0),
+                    Description = "Head of Sales Departmant",
+                    PostureScore = 53,
+                    MonthlyScore = 86,
+                    TodayScore = 60,
+                    Posture = "Leg-Crossed",
+                    ChairStatus = "Occcupied",
+                    BMI = 23,
+                    Height = 190,
+                    Weight = 90,
+                    Gender = "Male",
+                    Vibration = 3,
+                    RingDuration = 5,
+                    FocusHour = 4,
+                    AngleSenssor = true,
+                    PressureSensor = false
+            });
 
                 App.Database.SaveEmployee(new Employee()
                 {

@@ -44,6 +44,8 @@ namespace PostureRiteFinal.Data
 
         public bool AngleSenssor { get; set; }
 
+        public string Gender { get; set; }
+
         // Store the path/file name for user avatar image
         public string Avatar { get; set; }
 

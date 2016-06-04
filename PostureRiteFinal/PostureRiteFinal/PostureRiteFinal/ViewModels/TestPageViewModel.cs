@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using PostureRiteFinal.Data;
+using System.Diagnostics;
 
 namespace PostureRiteFinal.ViewModels
 {
@@ -154,13 +155,24 @@ namespace PostureRiteFinal.ViewModels
             }
         }
 
+        private int employeeID;
+        public int EmployeeID
+        {
+            get { return employeeID; }
+            set
+            {
+                employeeID = value;
+                RaisePropertyChanged(() => EmployeeID);
+            }
+        }
+
         public ICommand NextPageButtonCommmand { get; set; }
         public ICommand GoToMessageCommand { get; set; }
 
         public TestPageViewModel(INavigationService navService)
         {
             #region Binding data to setting value (Replace by data from SQLite)
-
+            Employee emp = App.Database.GetEmployee(1);
             BMI = 23;
             Height = 190;
             Weight = 90;

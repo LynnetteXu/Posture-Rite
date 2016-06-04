@@ -74,7 +74,7 @@
         <EntryCell Label="Weight (kg)" Text="{Binding Weight, Mode=TwoWay}" Placeholder="Enter your weight" />
         <EntryCell Label="BMI (%)" Text="{Binding BMI, Mode=TwoWay}" Placeholder="Enter your BMI" />
         <TextCell Text="Send Message" Command="{Binding GoToMessageCommand}"></TextCell>
-        <TextCell Text="My Appointment" Command="{Binding NextPageButtonCommmand}"></TextCell>
+        <TextCell Text="My Profile" Command="{Binding NextPageButtonCommmand}"></TextCell>
       </TableSection>
     </TableRoot>
   </TableView>
