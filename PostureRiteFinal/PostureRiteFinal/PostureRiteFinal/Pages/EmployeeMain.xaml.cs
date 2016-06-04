@@ -4,17 +4,22 @@ using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
 
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace PostureRiteFinal.Pages
 {
     public partial class EmployeeMain : ContentPage
     {
-        public EmployeeMain(Employee emp)
+        public EmployeeMain(int empID)
         {
+
+            Debug.WriteLine("Employee ID Checking: " + empID);
+            Employee emp = App.Database.GetEmployee(empID);
             InitializeComponent();
             BindingContext = new EmployeeMainViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
             var vm = BindingContext as EmployeeMainViewModel;
             vm.EmpName = emp.Name;
+            vm.EmployeeID = emp.ID;
             string appointmentBoolean = "No";
             if (emp.hasAppointment)
             {

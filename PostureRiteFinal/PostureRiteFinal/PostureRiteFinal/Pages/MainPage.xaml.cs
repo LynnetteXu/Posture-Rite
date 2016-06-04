@@ -5,6 +5,7 @@ using PostureRiteFinal.Data;
 using PostureRiteFinal.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,7 +43,7 @@ namespace PostureRiteFinal.Pages
                 {
                     Name = "Dr. Alan Turing",
                     Appointments = 5,
-                    Specialty = "Ergonimost"
+                    Specialty = "Ergonomist"
                 };
                 App.Database.SaveSpecialist(spec1);
                 Specialist spec2 = new Specialist()
@@ -66,19 +67,30 @@ namespace PostureRiteFinal.Pages
 
             //count number of specialists in list
             count = employeeList.Count();
-
+            
             //if empty, populate.
             if (count < 1)
             {
                 App.Database.SaveEmployee(new Employee()
                 {
                     Name = "John Doe",
-                    AppointmentSpecID = 11,
-                    hasAppointment = true
+                    AppointmentSpecID = 1,
+                    hasAppointment = true,
+                    AppointmentDateTime = new DateTime(2016, 6, 17, 17, 0, 0)
+                });
+
+                App.Database.SaveEmployee(new Employee()
+                {
+                    Name = "Rick Grimes",
+                    hasAppointment = false
                 });
             }
+            
 
+            var vm = BindingContext as MainPageViewModel;
 
+            //login parameter to be binded here, if there is a login page, search for employee ID with username and updated EmployeeID binding.
+            vm.EmployeeID = 1;
 
         }
 
