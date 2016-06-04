@@ -77,11 +77,13 @@ namespace PostureRiteFinal.Pages
             DateTime newDate = appDatePicker.Date;
             TimeSpan newTime = appTimePicker.Time;
 
-            Debug.WriteLine(newDate.ToString() +"HAHAHA" +  newTime.ToString());
-
-            Debug.WriteLine(newDate.Year+"HAHA"+ newDate.Month+" - "+ newDate.Day + " - " + newTime.Hours + " - " + newTime.Minutes + " - " + newTime.Seconds);
-
             DateTime newDateTime = new DateTime(newDate.Year, newDate.Month, newDate.Day, newTime.Hours, newTime.Minutes, newTime.Seconds);
+
+            emp.AppointmentDateTime = newDateTime;
+            App.Database.SaveEmployee(emp);
+
+            var vm = BindingContext as EmployeeAppointmentViewModel;
+            vm.TimeString = emp.AppointmentDateTime.ToString("dd/MM/yyyy HH:mm");
         }
 
     }

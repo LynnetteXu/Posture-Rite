@@ -5,8 +5,11 @@ namespace PostureRiteFinal.Data
     {
         public static string MainPage = "MainPage";
         public static string EmployeeMain = "EmployeeMain";
-        public static string ManagerMain = "ManagerMain";
+        //Manager Main page
+        public static string ListViewList = "ListViewList";
         public static string EmployeeAppointment = "EmployeeAppointment";
+        public static string SecondPage = "ProfilePage";
+        public static string TestPage = "TestPage";
         //public static string AppointmentSelectDoctor = "AppointmentSelectDoctor";
         //public static string AppointmentSelectTime = "AppointmentSelectTime";
         //public static string AppointmentConfirmSpecialist = "AppointmentConfirmSpecialist";

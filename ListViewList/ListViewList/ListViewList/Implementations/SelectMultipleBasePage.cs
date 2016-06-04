@@ -9,6 +9,7 @@ namespace ListViewList.Implementations
 {
     public class SelectMultipleBasePage<T> : ContentPage
     {
+       
         public class WrappedSelection<T> : INotifyPropertyChanged
         {
             public T Item { get; set; }
@@ -74,6 +75,7 @@ namespace ListViewList.Implementations
 
         public SelectMultipleBasePage(List<T> items)
         {
+            
             WrappedItems = items.Select(item => new WrappedSelection<T>() { Item = item, IsSelected = false }).ToList();
             ListView mainList = new ListView()
             {
@@ -82,7 +84,7 @@ namespace ListViewList.Implementations
             };
             StackLayout layt = new StackLayout { Orientation = StackOrientation.Vertical };
             Button send = new Button { Text = "send" };
-            send.Clicked += OnButtonClicked;
+           // send.Clicked += OnButtonClicked;
             layt.Children.Add(mainList);
             layt.Children.Add(send);
             mainList.ItemSelected += (sender, e) =>
@@ -98,13 +100,13 @@ namespace ListViewList.Implementations
             ToolbarItems.Add(new ToolbarItem("None", null, SelectNone, ToolbarItemOrder.Primary));
 
         }
-        async void OnButtonClicked(object sender, EventArgs args)
+       /* async void OnButtonClicked(object sender, EventArgs args)
         {
             string result = "";
             var answers = GetSelection();
             foreach (var a in answers)
             {
-                //result += a.Name + ", ";
+                result += a.Name + ", ";
             }
             if (result != "")
             {
@@ -112,7 +114,7 @@ namespace ListViewList.Implementations
 }
 
 
-        }
+        }*/
         void SelectAll()
         {
             foreach (var wi in WrappedItems)
