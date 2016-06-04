@@ -8,6 +8,8 @@ namespace PostureRiteFinal.Data
         //Manager Main page
         public static string ListViewList = "ListViewList";
         public static string EmployeeAppointment = "EmployeeAppointment";
+        public static string SecondPage = "ProfilePage";
+        public static string TestPage = "TestPage";
         //public static string AppointmentSelectDoctor = "AppointmentSelectDoctor";
         //public static string AppointmentSelectTime = "AppointmentSelectTime";
         //public static string AppointmentConfirmSpecialist = "AppointmentConfirmSpecialist";
