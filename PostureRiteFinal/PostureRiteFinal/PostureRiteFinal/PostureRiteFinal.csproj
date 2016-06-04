@@ -48,12 +48,16 @@
     <Compile Include="Pages\EmployeeMain.xaml.cs">
       <DependentUpon>EmployeeMain.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ListViewList.xaml.cs">
+      <DependentUpon>ListViewList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EmployeeAppointmentViewModel.cs" />
     <Compile Include="ViewModels\EmployeeMainViewModel.cs" />
+    <Compile Include="ViewModels\ListViewListViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,7 +116,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ListViewList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Android-icon-m.png" />
     <Content Include="Images\cell-phone-vibration.png" />
