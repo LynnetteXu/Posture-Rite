@@ -20,10 +20,46 @@ namespace ListViewList.ViewModels
                 RaisePropertyChanged(() => LabelText);
             }
         }
+        private int scoreText;
 
-        public SecondViewModel(string param)
+        public int ScoreText
+        {
+            get { return scoreText; }
+            set
+            {
+                scoreText = value;
+                RaisePropertyChanged(() =>ScoreText);
+            }
+        }
+        private int mscoreText;
+
+        public int MScoreText
+        {
+            get { return mscoreText; }
+            set
+            {
+                mscoreText = value;
+                RaisePropertyChanged(() => MScoreText);
+            }
+        }
+        private int tscoreText;
+
+        public int TScoreText
+        {
+            get { return tscoreText; }
+            set
+            {
+                tscoreText = value;
+                RaisePropertyChanged(() => TScoreText);
+            }
+        }
+
+        public SecondViewModel(string param, int cScore,int mScore, int tScore)
         {
             LabelText = param;
+            ScoreText = cScore;
+            MScoreText = mScore;
+            TScoreText = tScore;
         }
     }
 }
