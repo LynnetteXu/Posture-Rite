@@ -72,6 +72,11 @@ namespace PostureRiteFinal.Pages
             await Navigation.PushAsync(multiPage);
         }
 
+        async void ManagerSettings(object sender, EventArgs ea)
+        {
+            await Navigation.PushAsync(new ManagerSettingsPage());
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();

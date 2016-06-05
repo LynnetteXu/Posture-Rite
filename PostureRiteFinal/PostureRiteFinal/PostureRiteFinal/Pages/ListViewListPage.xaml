@@ -57,6 +57,7 @@
     <StackLayout Orientation="Vertical">
       <Label x:Name="results" Text="{Binding results}"/>
       <Button Text="Send default message" Clicked="OnClick"/>
+      <Button Text="Settings" Clicked="ManagerSettings"/>
     </StackLayout>
 
   </StackLayout>
