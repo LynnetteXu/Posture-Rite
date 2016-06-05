@@ -72,7 +72,7 @@ namespace PostureRiteFinal.Pages
 
             //count number of employees in list
             count = employeeList.Count();
-            
+
             //if empty, populate.
             if (count < 1)
             {
@@ -83,7 +83,7 @@ namespace PostureRiteFinal.Pages
                     hasAppointment = true,
                     AppointmentDateTime = new DateTime(2016, 6, 17, 17, 0, 0),
                     Description = "Head of Sales Departmant",
-                    PostureScore = 53, 
+                    PostureScore = 53,
                     TodayScore = 60,
                     Posture = "Leg-Crossed",
                     ChairStatus = "Occcupied",
@@ -147,7 +147,7 @@ namespace PostureRiteFinal.Pages
                     TotalScore = 10
                 };
                 App.Database.SaveEmployee(emp6);
-               
+
 
                 App.Database.SaveEmployee(new Employee()
                 {
@@ -155,13 +155,12 @@ namespace PostureRiteFinal.Pages
                     hasAppointment = false
                 });
             }
-            
+
 
             var vm = BindingContext as MainPageViewModel;
 
             //login parameter to be binded here, if there is a login page, search for employee ID with username and updated EmployeeID binding.
             vm.EmployeeID = 1;
-
         }
 
     }
