@@ -60,7 +60,7 @@ namespace PostureRiteFinal.Data
                 layout.ColumnDefinitions.Add(new ColumnDefinition());
                 layout.ColumnDefinitions.Add(new ColumnDefinition());
                 layout.ColumnDefinitions.Add(new ColumnDefinition());
-                //StackLayout layout = new StackLayout { Orientation = StackOrientation.Horizontal };
+                
 
                 layout.Children.Add(name,0,0);
                 layout.Children.Add(seatid,1,0);
