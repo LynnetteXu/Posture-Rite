@@ -43,6 +43,12 @@
     <Compile Include="Pages\AppointmentSelectDoc.xaml.cs">
       <DependentUpon>AppointmentSelectDoc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\EmployeePage.xaml.cs">
+      <DependentUpon>EmployeePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManagerPage.xaml.cs">
+      <DependentUpon>ManagerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ManagerSettingsPage.xaml.cs">
       <DependentUpon>ManagerSettingsPage.xaml</DependentUpon>
     </Compile>
@@ -75,8 +81,10 @@
     <Compile Include="ViewModels\AppointmentSelectDoctorViewModel.cs" />
     <Compile Include="ViewModels\EmployeeAppointmentViewModel.cs" />
     <Compile Include="ViewModels\EmployeeMainViewModel.cs" />
+    <Compile Include="ViewModels\EmployeeViewModel.cs" />
     <Compile Include="ViewModels\ListViewListViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\ManagerVieModel.cs" />
     <Compile Include="ViewModels\ProfilePageViewModel.cs" />
     <Compile Include="ViewModels\SecondViewModel.cs" />
     <Compile Include="ViewModels\TestPageViewModel.cs" />
@@ -185,6 +193,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\EmployeeScore.png" />
     <EmbeddedResource Include="Images\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\EmployeePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ClarkKent.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\BruceWayne.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ManagerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

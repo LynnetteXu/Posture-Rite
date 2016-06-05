@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PostureRiteFinal
+namespace PostureRiteFinal.Data
 {
     [ContentProperty("Source")]
     public class ImageResourceExtension : IMarkupExtension

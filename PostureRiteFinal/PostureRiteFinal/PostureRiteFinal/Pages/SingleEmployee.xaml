@@ -26,7 +26,7 @@
         <ColumnDefinition Width="*"/>
       </Grid.ColumnDefinitions>
       <Label Text="{Binding LabelText}" Grid.Row="0" Grid.Column="0"  TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" FontAttributes="Bold" Grid.RowSpan="2" />
-      <Button Clicked="message" Text="{Binding MakeContact}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Micro"/>
+      <Button  Text="{Binding MakeContact}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Micro"/>
       <Image Source="{Binding EmployeeScore}" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="2" Aspect="AspectFit"/>
       <Button Clicked="referSpecialist" Text="{Binding ReferToErgonomist}" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" FontSize="Micro"/>
 

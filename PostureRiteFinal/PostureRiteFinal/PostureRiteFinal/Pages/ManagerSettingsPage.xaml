@@ -61,7 +61,8 @@
       <Label Grid.Row="5" Grid.Column="1" Text="Vacant seat" FontSize="15" HorizontalTextAlignment="Center" />
 
     </Grid>
-    <!--<Label Text="{Binding MainText}"  HorizontalOptions="Center" />
-  <Button Text="{Binding ButtonLabel}" Command="{Binding ButtonCommand}"/>-->
+    
+    
+  
   </StackLayout>
 </ContentPage>

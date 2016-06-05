@@ -12,5 +12,7 @@ namespace PostureRiteFinal.Data
         public static string SecondPage = "ProfilePage";
         public static string TestPage = "TestPage";
         public static string AppointmentSelectDoctor = "AppointmentSelectDoctor";
+        public static string ManagerPage = "ManagerPage";
+        public static string EmployeePage = "EmployeePage";
     }
 }

@@ -14,5 +14,11 @@ namespace PostureRiteFinal.Pages
         {
             InitializeComponent();
         }
+        async void feedback(object sender, EventArgs ea)
+        {
+
+
+            await Navigation.PushAsync(new EmployeePage());
+        }
     }
 }

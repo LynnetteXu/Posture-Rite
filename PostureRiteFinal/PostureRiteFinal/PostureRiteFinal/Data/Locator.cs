@@ -12,7 +12,7 @@ namespace PostureRiteFinal.Data
         public static string SecondPage = "ProfilePage";
         public static string TestPage = "TestPage";
         public static string AppointmentSelectDoctor = "AppointmentSelectDoctor";
-        public static string IncomingViewCell = "IncomingViewCell";
-        public static string OutgoingViewCell = "OutgoingViewCell";
+        public static string ManagerPage = "ManagerPage";
+        public static string EmployeePage = "EmployeePage";
     }
 }

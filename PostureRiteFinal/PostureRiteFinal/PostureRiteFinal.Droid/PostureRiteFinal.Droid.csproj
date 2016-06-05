@@ -106,6 +106,7 @@
     <Compile Include="SQLite_Android.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\PostureRiteFinal.Droid-Signed.apk" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
