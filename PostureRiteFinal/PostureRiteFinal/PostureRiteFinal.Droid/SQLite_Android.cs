@@ -17,7 +17,7 @@ namespace PostureRiteFinal.Droid
         #region ISQLite implementation
         public SQLite.SQLiteConnection GetConnection()
         {
-            var sqliteFilename = "PostureRiteSQLite1.db3";
+            var sqliteFilename = "PostureRiteSQLitedbase.db3";
             string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
             var path = Path.Combine(documentsPath, sqliteFilename);
 

@@ -79,6 +79,23 @@ namespace PostureRiteFinal.Pages
                 Employee emp1 = new Employee()
                 {
                     Name = "Peter",
+                    AppointmentSpecID = 1,
+                    hasAppointment = true,
+                    AppointmentDateTime = new DateTime(2016, 6, 17, 17, 0, 0),
+                    Description = "Head of Sales Departmant",
+                    PostureScore = 53, 
+                    TodayScore = 60,
+                    Posture = "Leg-Crossed",
+                    ChairStatus = "Occcupied",
+                    BMI = 23,
+                    Height = 190,
+                    Weight = 90,
+                    Gender = "Male",
+                    Vibration = 3,
+                    RingDuration = 5,
+                    FocusHour = 4,
+                    AngleSenssor = true,
+                    PressureSensor = false,
                     SeatId = 505,
                     Score = 10,
                     MonthlyScore = 50,
@@ -87,7 +104,7 @@ namespace PostureRiteFinal.Pages
                 App.Database.SaveEmployee(emp1);
                 Employee emp2 = new Employee()
                 {
-                    Name = "Clark",
+                    Name = "John Doe",
                     SeatId = 995,
                     Score = 20,
                     MonthlyScore = 48,
@@ -130,28 +147,7 @@ namespace PostureRiteFinal.Pages
                     TotalScore = 10
                 };
                 App.Database.SaveEmployee(emp6);
-                App.Database.SaveEmployee(new Employee()
-                {
-                    Name = "John Doe",
-                    AppointmentSpecID = 1,
-                    hasAppointment = true,
-                    AppointmentDateTime = new DateTime(2016, 6, 17, 17, 0, 0),
-                    Description = "Head of Sales Departmant",
-                    PostureScore = 53,
-                    MonthlyScore = 86,
-                    TodayScore = 60,
-                    Posture = "Leg-Crossed",
-                    ChairStatus = "Occcupied",
-                    BMI = 23,
-                    Height = 190,
-                    Weight = 90,
-                    Gender = "Male",
-                    Vibration = 3,
-                    RingDuration = 5,
-                    FocusHour = 4,
-                    AngleSenssor = true,
-                    PressureSensor = false
-            });
+               
 
                 App.Database.SaveEmployee(new Employee()
                 {
