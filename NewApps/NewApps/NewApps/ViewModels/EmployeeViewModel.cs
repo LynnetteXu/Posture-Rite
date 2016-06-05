@@ -43,7 +43,7 @@ namespace NewApps.ViewModels
         {
             _navigationService = navService;
             DisplayName = "andy";
-            UserImg = ImageSource.FromResource("Newapps.Images.ClarkKent.JPG");
+            UserImg = ImageSource.FromResource("NewApps.Images.ClarkKent.JPG");
             NextPageCommand = new Command(() =>
             _navigationService.NavigateTo(Locator.ManagerPage));
         }
