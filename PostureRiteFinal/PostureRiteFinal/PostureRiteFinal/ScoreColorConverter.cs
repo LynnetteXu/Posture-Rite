@@ -13,17 +13,29 @@ namespace PostureRiteFinal
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
 
-            if ((int)value < 30)
+            if ((int)value>0 && (int)value < 20)
             {
                 return Color.Red;
             }
-            if ((int)value > 30 && (int)value < 60)
+            if ((int)value >= 20 && (int)value < 40)
+            {
+                return Color.Fuchsia;
+            }
+            if ((int)value >= 40 && (int)value < 60)
+            {
+                return Color.Yellow;
+            }
+            if ((int)value >= 60 && (int)value < 80)
             {
                 return Color.Lime;
             }
+            if ((int)value >= 100)
+            {
+                return Color.Green;
+            }
             else
             {
-                return Color.Blue;
+                return Color.Gray;
             }
 
 

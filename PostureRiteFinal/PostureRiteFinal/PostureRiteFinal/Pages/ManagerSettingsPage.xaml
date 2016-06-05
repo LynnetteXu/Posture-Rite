@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PostureRiteFinal.Pages.ManagerSettingsPage">
+  <StackLayout>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="100" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="3*" />
+      </Grid.ColumnDefinitions>
+      <Image Grid.Column="0" Source="BruceWayne.jpg"  />
+      <Label Grid.Column="1" Text="Bruce Wayne" FontSize="30"  VerticalTextAlignment="Center"/>
+    </Grid>
+    <Label Text="Settings" FontSize="24" />
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="1*" />
+      </Grid.ColumnDefinitions>
+      <Label Grid.Column="0" Grid.Row="0" Text="Focus Time Setting" FontSize="18" VerticalTextAlignment="Center" />
+      <Picker  Grid.Row="0" Grid.Column="1" x:Name="SettingPicker" Title="Period"  >
+        <!--SelectedIndexChanged="OnPickerSelectionIndexChanged"-->
+        <Picker.Items>
+          <x:String>08:30 to 12:00</x:String>
+          <x:String>13:00 to 16:30</x:String>
+          <x:String>Whole Day</x:String>
+        </Picker.Items>
+      </Picker>
+      <Label Grid.Row="1" Grid.Column="0"  Text="Max Remind Time (90 mins)" FontSize="18" />
+      <Slider Grid.Row="1" Grid.Column="1" Maximum="180" Minimum="20" Value="90"  />
+    </Grid>
+
+    <Button x:Name="ShowFeedback" Text="Manage default messages" Command="{Binding ButtonCommand}" />
+    <Label BackgroundColor="Gray" TextColor="Black" Text="Colour definitions"  FontSize="18" HorizontalTextAlignment="Center" />
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="18" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="2*" />
+      </Grid.ColumnDefinitions>
+
+      <Label Grid.Row="0" Grid.Column="0" BackgroundColor="Red"  />
+      <Label Grid.Row="0" Grid.Column="1" Text="Bad posture" FontSize="15" HorizontalTextAlignment="Center" />
+      <Label Grid.Row="1" Grid.Column="0" BackgroundColor="Fuchsia"  />
+      <Label Grid.Row="1" Grid.Column="1" Text="Score between 25 and 50" FontSize="15" HorizontalTextAlignment="Center" />
+      <Label Grid.Row="2" Grid.Column="0" BackgroundColor="Yellow"  />
+      <Label Grid.Row="2" Grid.Column="1" Text="Medium posture" FontSize="15" HorizontalTextAlignment="Center" />
+      <Label Grid.Row="3" Grid.Column="0" BackgroundColor="Lime"  />
+      <Label Grid.Row="3" Grid.Column="1" Text="Score between 50 and 75" FontSize="15" HorizontalTextAlignment="Center" />
+      <Label Grid.Row="4" Grid.Column="0" BackgroundColor="Green"  />
+      <Label Grid.Row="4" Grid.Column="1" Text="Awesome posture" FontSize="15" HorizontalTextAlignment="Center" />
+      <Label Grid.Row="5" Grid.Column="0" BackgroundColor="Gray"  />
+      <Label Grid.Row="5" Grid.Column="1" Text="Vacant seat" FontSize="15" HorizontalTextAlignment="Center" />
+
+    </Grid>
+    <!--<Label Text="{Binding MainText}"  HorizontalOptions="Center" />
+  <Button Text="{Binding ButtonLabel}" Command="{Binding ButtonCommand}"/>-->
+  </StackLayout>
+</ContentPage>
