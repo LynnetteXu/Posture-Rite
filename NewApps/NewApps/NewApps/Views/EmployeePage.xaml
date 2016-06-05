@@ -7,7 +7,7 @@
       <Image Source="{Binding UserImg}" />
       <Label TextColor="#77d065" FontSize = "20" Text="The comment from the Clark Kent is:" />
       <Label Text ="{Binding DisplayName}" BackgroundColor="Blue" />
-      <Button Text="Upload" Command="NextPageCommand"/>
+      <Button Text="Upload" Command="{Binding NextPageCommand}"/>
     </StackLayout>
   </ContentPage.Content>
 

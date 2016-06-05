@@ -20,7 +20,6 @@ namespace NewApps
             nav.Configure(Locator.EmployeePage, typeof(EmployeePage));
             nav.Configure(Locator.ManagerPage, typeof(ManagerPage));
             SimpleIoc.Default.Register<INavigationService>(() => nav);
-
             var mainPage = new NavigationPage(new EmployeePage());
             nav.Initialize(mainPage);
             MainPage = mainPage;
