@@ -72,7 +72,6 @@ namespace PostureRiteFinal.Pages
             await Navigation.PushAsync(multiPage);
         }
 
-
         protected override void OnAppearing()
         {
             base.OnAppearing();

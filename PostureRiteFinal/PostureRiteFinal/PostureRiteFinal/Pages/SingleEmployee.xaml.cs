@@ -16,5 +16,9 @@ namespace PostureRiteFinal.Pages
             InitializeComponent();
             BindingContext = new SecondViewModel(param, cScore, mScore, tScore);
         }
+        async void referSpecialist(object sender, EventArgs ea)
+        {
+            await Navigation.PushAsync(new AppointmentSelectDoc());
+        }
     }
 }
