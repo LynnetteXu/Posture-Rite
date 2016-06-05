@@ -37,14 +37,25 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Data\Employee.cs" />
+    <Compile Include="Data\ImageResourceExtension.cs" />
     <Compile Include="Data\Locator.cs" />
     <Compile Include="Data\NavigationService.cs" />
     <Compile Include="Data\PostureDB.cs" />
+    <Compile Include="MyDataTemplateSelector.cs" />
     <Compile Include="Pages\AppointmentSelectDoc.xaml.cs">
       <DependentUpon>AppointmentSelectDoc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ChatPage.xaml.cs">
+      <DependentUpon>ChatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IncomingViewCell.xaml.cs">
+      <DependentUpon>IncomingViewCell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ManagerSettingsPage.xaml.cs">
       <DependentUpon>ManagerSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OutgoingViewCell.xaml.cs">
+      <DependentUpon>OutgoingViewCell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SingleEmployee.xaml.cs">
       <DependentUpon>SingleEmployee.xaml</DependentUpon>
@@ -73,10 +84,13 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AppointmentSelectDoctorViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\ChatViewModel.cs" />
     <Compile Include="ViewModels\EmployeeAppointmentViewModel.cs" />
     <Compile Include="ViewModels\EmployeeMainViewModel.cs" />
     <Compile Include="ViewModels\ListViewListViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\MessageViewModel.cs" />
     <Compile Include="ViewModels\ProfilePageViewModel.cs" />
     <Compile Include="ViewModels\SecondViewModel.cs" />
     <Compile Include="ViewModels\TestPageViewModel.cs" />
@@ -185,6 +199,36 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\EmployeeScore.png" />
     <EmbeddedResource Include="Images\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\IncomingViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\OutgoingViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="brucewayne.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="clarkkent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ChatPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="baboon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="squirrel.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

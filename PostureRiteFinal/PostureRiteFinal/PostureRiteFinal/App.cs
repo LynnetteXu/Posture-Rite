@@ -33,6 +33,8 @@ namespace PostureRiteFinal
             nav.Configure(Locator.SingleEmployee, typeof(SingleEmployee));
             nav.Configure(Locator.TestPage, typeof(TestPage));
             nav.Configure(Locator.SecondPage, typeof(ProfilePage));
+            nav.Configure(Locator.IncomingViewCell, typeof(IncomingViewCell));
+            nav.Configure(Locator.OutgoingViewCell, typeof(OutgoingViewCell));
             SimpleIoc.Default.Register<INavigationService>(() => nav);
 
             var mainPage = new NavigationPage(new MainPage());

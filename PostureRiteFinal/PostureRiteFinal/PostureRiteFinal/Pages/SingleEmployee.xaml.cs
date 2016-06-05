@@ -21,5 +21,9 @@ namespace PostureRiteFinal.Pages
         {
             await Navigation.PushAsync(new AppointmentSelectDoc());
         }
+        async void message(object sender, EventArgs ea)
+        {
+            await Navigation.PushAsync(new ChatPage());
+        }
     }
 }
